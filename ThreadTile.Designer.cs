@@ -43,6 +43,7 @@
             this.tableLayoutPanel.Controls.Add(this.lblThreadName, 0, 0);
             this.tableLayoutPanel.Controls.Add(this.lblThreadMaker, 0, 1);
             this.tableLayoutPanel.Controls.Add(this.lblThreadDate, 1, 1);
+            this.tableLayoutPanel.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
@@ -55,6 +56,7 @@
             // lblThreadName
             // 
             this.lblThreadName.AutoSize = true;
+            this.lblThreadName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblThreadName.Font = new System.Drawing.Font("Calibri", 20.25F);
             this.lblThreadName.Location = new System.Drawing.Point(3, 0);
             this.lblThreadName.Name = "lblThreadName";
@@ -65,12 +67,14 @@
             // lblThreadMaker
             // 
             this.lblThreadMaker.AutoSize = true;
+            this.lblThreadMaker.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblThreadMaker.Font = new System.Drawing.Font("Calibri", 16F);
             this.lblThreadMaker.Location = new System.Drawing.Point(3, 43);
             this.lblThreadMaker.Name = "lblThreadMaker";
             this.lblThreadMaker.Size = new System.Drawing.Size(158, 27);
             this.lblThreadMaker.TabIndex = 1;
             this.lblThreadMaker.Text = "THREAD MAKER";
+            this.lblThreadMaker.Click += new System.EventHandler(this.lblThreadMaker_Click);
             // 
             // lblThreadDate
             // 

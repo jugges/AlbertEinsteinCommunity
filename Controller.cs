@@ -32,7 +32,7 @@ namespace AlbertEinsteinCommunity
         {
             try
             {
-                command.CommandText = "INSERT INTO Users ([username], [password], [email], birthDate, privacy, firstName, biography, job, sex, livingArea) VALUES('" + user.Username + "', '" + user.Password + "', '" + user.Email + "', '" + user.BirthDate.ToShortDateString() + "', '" + user.Privacy + "', '" + user.FirstName + "', '" + user.Biography + "', '" + user.Job + "', '" + user.Sex + "', '" + user.LivingArea + "')";
+                command.CommandText = "INSERT INTO Users ([username], [password], [email], birthDate, privacy, firstName, biography, job, sex, livingArea) VALUES('" + user.Username + "', '" + user.Password + "', '" + user.Email + "', '" + user.BirthDate.ToShortDateString() + "', '" + user.FirstName + "', '" + user.Biography + "', '" + user.Job + "', '" + user.Sex + "', '" + user.LivingArea + "')";
                 //command.CommandText = "INSERT INTO Users ([username], [password], [email], birthDate, privacy, firstName, biography, job, sex, livingArea) VALUES ('', '', '', '', '', '', '', '', '', '')";
                 command.CommandType = CommandType.Text;
                 connection.Open();
@@ -102,7 +102,6 @@ namespace AlbertEinsteinCommunity
                     {
                         // ignored
                     }
-                    user.Privacy = reader["privacy"].ToString();
                     user.FirstName = reader["firstName"].ToString();
                     user.Biography = reader["biography"].ToString();
                     user.Job = reader["job"].ToString();
@@ -126,7 +125,7 @@ namespace AlbertEinsteinCommunity
         {
             try
             {
-                command.CommandText = "UPDATE Users SET [email] = '"+user.Email+"', [birthDate] = '"+user.BirthDate.ToShortDateString()+ "', [privacy] = '" + user.Privacy + "', [firstName] = '" + user.FirstName + "', [biography] = '" + user.Biography + "', [job] = '" + user.Job + "', [sex] = '" + user.Sex + "', [livingArea] = '" + user.LivingArea + "' WHERE[username] = '" + user.Username + "'";
+                command.CommandText = "UPDATE Users SET [email] = '"+user.Email+"', [birthDate] = '"+user.BirthDate.ToShortDateString()+ "', [firstName] = '" + user.FirstName + "', [biography] = '" + user.Biography + "', [job] = '" + user.Job + "', [sex] = '" + user.Sex + "', [livingArea] = '" + user.LivingArea + "' WHERE[username] = '" + user.Username + "'";
                 command.CommandType = CommandType.Text;
                 connection.Open();
 

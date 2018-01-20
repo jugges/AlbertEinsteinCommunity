@@ -20,7 +20,7 @@ namespace AlbertEinsteinCommunity
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (txtboxUsername.Text != "" && txtboxPassword.Text != "" && txtboxEmail.Text != "" & comboboxPrivacy.Text != "")
+            if (txtboxUsername.Text != "" && txtboxPassword.Text != "" && txtboxEmail.Text != "")
             {
                 if (System.DateTime.Today.Subtract(datetimepickerBirthDate.Value).Days > 3650)
                 {
@@ -30,7 +30,6 @@ namespace AlbertEinsteinCommunity
                     user.Password = Rework.Crypto.ToSHA(txtboxPassword.Text, Crypto.SHA_Type.SHA256).ToLower();
                     user.Email = txtboxEmail.Text;
                     user.BirthDate = datetimepickerBirthDate.Value;
-                    user.Privacy = comboboxPrivacy.Text;
                     user.FirstName = txtboxFirstName.Text;
                     user.Biography = txtboxBiography.Text;
                     user.Job = txtboxJob.Text;

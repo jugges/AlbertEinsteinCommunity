@@ -14,7 +14,6 @@ namespace AlbertEinsteinCommunity
         public int Karma { get; set; }
         public DateTime RegisteringDate { get; set; }
         public DateTime BirthDate { get; set; }
-        public string Privacy { get; set; }
         public string FirstName { get; set; }
         public string Biography { get; set; }
         public string Job { get; set; }

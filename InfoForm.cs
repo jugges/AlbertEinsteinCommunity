@@ -33,7 +33,6 @@ namespace AlbertEinsteinCommunity
             {
                 lblBirthDate.Text = "Not mentioned";
             }
-            lblPrivacy.Text = user.Privacy;
             lblFirstName.Text = user.FirstName;
             lblBiography.Text = user.Biography;
             lblJob.Text = user.Job;

@@ -33,7 +33,6 @@ namespace AlbertEinsteinCommunity
                 // ignored
             }
 
-            comboboxPrivacy.Text = user.Privacy;
             txtboxFirstName.Text = user.FirstName;
             txtboxBiography.Text = user.Biography;
             txtboxJob.Text = user.Job;
@@ -45,7 +44,6 @@ namespace AlbertEinsteinCommunity
         {
             user.Email = txtboxEmail.Text;
             user.BirthDate = datetimepickerBirthDate.Value;
-            user.Privacy = comboboxPrivacy.Text;
             user.FirstName = txtboxFirstName.Text;
             user.Biography = txtboxBiography.Text;
             user.Job = txtboxJob.Text;

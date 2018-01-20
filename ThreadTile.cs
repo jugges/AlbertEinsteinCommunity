@@ -21,5 +21,11 @@ namespace AlbertEinsteinCommunity
             lblThreadMaker.Text = thread.ThreadMaker.Username;
             lblThreadDate.Text = thread.ThreadDate.ToShortDateString();
         }
+
+        private void lblThreadMaker_Click(object sender, EventArgs e)
+        {
+            InfoForm infoForm = new InfoForm(thread.ThreadMaker);
+            infoForm.Show();
+        }
     }
 }

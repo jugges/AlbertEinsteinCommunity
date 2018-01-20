@@ -37,8 +37,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtboxFirstName = new System.Windows.Forms.TextBox();
             this.lblFirstName = new System.Windows.Forms.Label();
-            this.comboboxPrivacy = new System.Windows.Forms.ComboBox();
-            this.lblPrivacy = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.datetimepickerBirthDate = new System.Windows.Forms.DateTimePicker();
             this.txtboxEmail = new System.Windows.Forms.TextBox();
@@ -57,9 +55,9 @@
             this.btnSave.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSave.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(3, 241);
+            this.btnSave.Location = new System.Drawing.Point(3, 212);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(362, 39);
+            this.btnSave.Size = new System.Drawing.Size(362, 68);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -70,7 +68,7 @@
             this.lblLivingArea.AutoSize = true;
             this.lblLivingArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblLivingArea.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblLivingArea.Location = new System.Drawing.Point(3, 203);
+            this.lblLivingArea.Location = new System.Drawing.Point(3, 174);
             this.lblLivingArea.Name = "lblLivingArea";
             this.lblLivingArea.Size = new System.Drawing.Size(127, 29);
             this.lblLivingArea.TabIndex = 26;
@@ -84,7 +82,7 @@
             "Male",
             "Female",
             "Other"});
-            this.comboboxSex.Location = new System.Drawing.Point(136, 177);
+            this.comboboxSex.Location = new System.Drawing.Point(136, 148);
             this.comboboxSex.Name = "comboboxSex";
             this.comboboxSex.Size = new System.Drawing.Size(223, 21);
             this.comboboxSex.TabIndex = 24;
@@ -94,7 +92,7 @@
             this.lblSex.AutoSize = true;
             this.lblSex.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSex.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblSex.Location = new System.Drawing.Point(3, 174);
+            this.lblSex.Location = new System.Drawing.Point(3, 145);
             this.lblSex.Name = "lblSex";
             this.lblSex.Size = new System.Drawing.Size(127, 29);
             this.lblSex.TabIndex = 23;
@@ -103,7 +101,7 @@
             // txtboxJob
             // 
             this.txtboxJob.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtboxJob.Location = new System.Drawing.Point(136, 148);
+            this.txtboxJob.Location = new System.Drawing.Point(136, 119);
             this.txtboxJob.Name = "txtboxJob";
             this.txtboxJob.Size = new System.Drawing.Size(223, 20);
             this.txtboxJob.TabIndex = 22;
@@ -113,7 +111,7 @@
             this.lblJob.AutoSize = true;
             this.lblJob.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblJob.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblJob.Location = new System.Drawing.Point(3, 145);
+            this.lblJob.Location = new System.Drawing.Point(3, 116);
             this.lblJob.Name = "lblJob";
             this.lblJob.Size = new System.Drawing.Size(127, 29);
             this.lblJob.TabIndex = 21;
@@ -126,26 +124,24 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.lblLivingArea, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.comboboxSex, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.lblSex, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.txtboxJob, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.lblJob, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.txtboxFirstName, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lblFirstName, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.comboboxPrivacy, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblPrivacy, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblLivingArea, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.comboboxSex, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lblSex, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.txtboxJob, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lblJob, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.txtboxFirstName, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblFirstName, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblEmail, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.datetimepickerBirthDate, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtboxEmail, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblBirthdate, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblBiography, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.txtboxBiography, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.comboboxLivingArea, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.lblBiography, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txtboxBiography, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.comboboxLivingArea, 1, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 8;
+            this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -153,14 +149,13 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(362, 232);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(362, 203);
             this.tableLayoutPanel1.TabIndex = 19;
             // 
             // txtboxFirstName
             // 
             this.txtboxFirstName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtboxFirstName.Location = new System.Drawing.Point(136, 90);
+            this.txtboxFirstName.Location = new System.Drawing.Point(136, 61);
             this.txtboxFirstName.Name = "txtboxFirstName";
             this.txtboxFirstName.Size = new System.Drawing.Size(223, 20);
             this.txtboxFirstName.TabIndex = 18;
@@ -170,35 +165,11 @@
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblFirstName.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblFirstName.Location = new System.Drawing.Point(3, 87);
+            this.lblFirstName.Location = new System.Drawing.Point(3, 58);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(127, 29);
             this.lblFirstName.TabIndex = 17;
             this.lblFirstName.Text = "First Name:";
-            // 
-            // comboboxPrivacy
-            // 
-            this.comboboxPrivacy.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboboxPrivacy.FormattingEnabled = true;
-            this.comboboxPrivacy.Items.AddRange(new object[] {
-            "Show birth date",
-            "Hide birth date"});
-            this.comboboxPrivacy.Location = new System.Drawing.Point(136, 61);
-            this.comboboxPrivacy.Name = "comboboxPrivacy";
-            this.comboboxPrivacy.Size = new System.Drawing.Size(223, 21);
-            this.comboboxPrivacy.TabIndex = 15;
-            // 
-            // lblPrivacy
-            // 
-            this.lblPrivacy.AutoSize = true;
-            this.lblPrivacy.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblPrivacy.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblPrivacy.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblPrivacy.Location = new System.Drawing.Point(3, 58);
-            this.lblPrivacy.Name = "lblPrivacy";
-            this.lblPrivacy.Size = new System.Drawing.Size(127, 29);
-            this.lblPrivacy.TabIndex = 16;
-            this.lblPrivacy.Text = "Privacy: ";
             // 
             // lblEmail
             // 
@@ -245,7 +216,7 @@
             this.lblBiography.AutoSize = true;
             this.lblBiography.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblBiography.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblBiography.Location = new System.Drawing.Point(3, 116);
+            this.lblBiography.Location = new System.Drawing.Point(3, 87);
             this.lblBiography.Name = "lblBiography";
             this.lblBiography.Size = new System.Drawing.Size(127, 29);
             this.lblBiography.TabIndex = 19;
@@ -254,7 +225,7 @@
             // txtboxBiography
             // 
             this.txtboxBiography.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtboxBiography.Location = new System.Drawing.Point(136, 119);
+            this.txtboxBiography.Location = new System.Drawing.Point(136, 90);
             this.txtboxBiography.Name = "txtboxBiography";
             this.txtboxBiography.Size = new System.Drawing.Size(223, 20);
             this.txtboxBiography.TabIndex = 20;
@@ -269,7 +240,7 @@
             "Hatzafon",
             "Hadarom",
             "Not Israel"});
-            this.comboboxLivingArea.Location = new System.Drawing.Point(136, 206);
+            this.comboboxLivingArea.Location = new System.Drawing.Point(136, 177);
             this.comboboxLivingArea.Name = "comboboxLivingArea";
             this.comboboxLivingArea.Size = new System.Drawing.Size(223, 21);
             this.comboboxLivingArea.TabIndex = 25;
@@ -320,8 +291,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox txtboxFirstName;
         private System.Windows.Forms.Label lblFirstName;
-        private System.Windows.Forms.ComboBox comboboxPrivacy;
-        private System.Windows.Forms.Label lblPrivacy;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.DateTimePicker datetimepickerBirthDate;
         private System.Windows.Forms.TextBox txtboxEmail;

@@ -37,7 +37,6 @@
             this.lblStaticEmail = new System.Windows.Forms.Label();
             this.lblStaticRegisteringDate = new System.Windows.Forms.Label();
             this.lblStaticBirthDate = new System.Windows.Forms.Label();
-            this.lblStaticPrivacy = new System.Windows.Forms.Label();
             this.lblStaticFirstName = new System.Windows.Forms.Label();
             this.lblStaticBiography = new System.Windows.Forms.Label();
             this.lblStaticJob = new System.Windows.Forms.Label();
@@ -45,7 +44,6 @@
             this.lblKarma = new System.Windows.Forms.Label();
             this.lblRegisteringDate = new System.Windows.Forms.Label();
             this.lblBirthDate = new System.Windows.Forms.Label();
-            this.lblPrivacy = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblBiography = new System.Windows.Forms.Label();
             this.lblJob = new System.Windows.Forms.Label();
@@ -90,9 +88,9 @@
             // 
             this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEdit.Font = new System.Drawing.Font("Calibri", 16F);
-            this.btnEdit.Location = new System.Drawing.Point(3, 332);
+            this.btnEdit.Location = new System.Drawing.Point(3, 303);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(508, 72);
+            this.btnEdit.Size = new System.Drawing.Size(508, 101);
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -110,26 +108,23 @@
             this.tableLayoutPanel2.Controls.Add(this.lblStaticEmail, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblStaticRegisteringDate, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.lblStaticBirthDate, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.lblStaticPrivacy, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.lblStaticFirstName, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.lblStaticBiography, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.lblStaticJob, 0, 7);
-            this.tableLayoutPanel2.Controls.Add(this.lblStaticSex, 0, 8);
+            this.tableLayoutPanel2.Controls.Add(this.lblStaticFirstName, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.lblStaticBiography, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.lblStaticJob, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.lblStaticSex, 0, 7);
             this.tableLayoutPanel2.Controls.Add(this.lblKarma, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.lblRegisteringDate, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.lblBirthDate, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.lblPrivacy, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.lblFirstName, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.lblBiography, 1, 6);
-            this.tableLayoutPanel2.Controls.Add(this.lblJob, 1, 7);
-            this.tableLayoutPanel2.Controls.Add(this.lblSex, 1, 8);
-            this.tableLayoutPanel2.Controls.Add(this.lblLivingArea, 1, 9);
-            this.tableLayoutPanel2.Controls.Add(this.lblStaticLivingArea, 0, 9);
+            this.tableLayoutPanel2.Controls.Add(this.lblFirstName, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.lblBiography, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.lblJob, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.lblSex, 1, 7);
+            this.tableLayoutPanel2.Controls.Add(this.lblLivingArea, 1, 8);
+            this.tableLayoutPanel2.Controls.Add(this.lblStaticLivingArea, 0, 8);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 36);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 10;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowCount = 9;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -143,7 +138,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(508, 290);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(508, 261);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // lblStaticKarma
@@ -196,21 +191,11 @@
             this.lblStaticBirthDate.TabIndex = 4;
             this.lblStaticBirthDate.Text = "Birth Date:";
             // 
-            // lblStaticPrivacy
-            // 
-            this.lblStaticPrivacy.AutoSize = true;
-            this.lblStaticPrivacy.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblStaticPrivacy.Location = new System.Drawing.Point(3, 116);
-            this.lblStaticPrivacy.Name = "lblStaticPrivacy";
-            this.lblStaticPrivacy.Size = new System.Drawing.Size(89, 29);
-            this.lblStaticPrivacy.TabIndex = 5;
-            this.lblStaticPrivacy.Text = "Privacy:";
-            // 
             // lblStaticFirstName
             // 
             this.lblStaticFirstName.AutoSize = true;
             this.lblStaticFirstName.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblStaticFirstName.Location = new System.Drawing.Point(3, 145);
+            this.lblStaticFirstName.Location = new System.Drawing.Point(3, 116);
             this.lblStaticFirstName.Name = "lblStaticFirstName";
             this.lblStaticFirstName.Size = new System.Drawing.Size(125, 29);
             this.lblStaticFirstName.TabIndex = 27;
@@ -220,7 +205,7 @@
             // 
             this.lblStaticBiography.AutoSize = true;
             this.lblStaticBiography.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblStaticBiography.Location = new System.Drawing.Point(3, 174);
+            this.lblStaticBiography.Location = new System.Drawing.Point(3, 145);
             this.lblStaticBiography.Name = "lblStaticBiography";
             this.lblStaticBiography.Size = new System.Drawing.Size(119, 29);
             this.lblStaticBiography.TabIndex = 28;
@@ -230,7 +215,7 @@
             // 
             this.lblStaticJob.AutoSize = true;
             this.lblStaticJob.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblStaticJob.Location = new System.Drawing.Point(3, 203);
+            this.lblStaticJob.Location = new System.Drawing.Point(3, 174);
             this.lblStaticJob.Name = "lblStaticJob";
             this.lblStaticJob.Size = new System.Drawing.Size(53, 29);
             this.lblStaticJob.TabIndex = 29;
@@ -240,7 +225,7 @@
             // 
             this.lblStaticSex.AutoSize = true;
             this.lblStaticSex.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblStaticSex.Location = new System.Drawing.Point(3, 232);
+            this.lblStaticSex.Location = new System.Drawing.Point(3, 203);
             this.lblStaticSex.Name = "lblStaticSex";
             this.lblStaticSex.Size = new System.Drawing.Size(52, 29);
             this.lblStaticSex.TabIndex = 30;
@@ -276,21 +261,11 @@
             this.lblBirthDate.TabIndex = 34;
             this.lblBirthDate.Text = "BIRTHDATE";
             // 
-            // lblPrivacy
-            // 
-            this.lblPrivacy.AutoSize = true;
-            this.lblPrivacy.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblPrivacy.Location = new System.Drawing.Point(189, 116);
-            this.lblPrivacy.Name = "lblPrivacy";
-            this.lblPrivacy.Size = new System.Drawing.Size(96, 29);
-            this.lblPrivacy.TabIndex = 35;
-            this.lblPrivacy.Text = "PRIVACY";
-            // 
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblFirstName.Location = new System.Drawing.Point(189, 145);
+            this.lblFirstName.Location = new System.Drawing.Point(189, 116);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(129, 29);
             this.lblFirstName.TabIndex = 36;
@@ -300,7 +275,7 @@
             // 
             this.lblBiography.AutoSize = true;
             this.lblBiography.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblBiography.Location = new System.Drawing.Point(189, 174);
+            this.lblBiography.Location = new System.Drawing.Point(189, 145);
             this.lblBiography.Name = "lblBiography";
             this.lblBiography.Size = new System.Drawing.Size(129, 29);
             this.lblBiography.TabIndex = 37;
@@ -310,7 +285,7 @@
             // 
             this.lblJob.AutoSize = true;
             this.lblJob.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblJob.Location = new System.Drawing.Point(189, 203);
+            this.lblJob.Location = new System.Drawing.Point(189, 174);
             this.lblJob.Name = "lblJob";
             this.lblJob.Size = new System.Drawing.Size(50, 29);
             this.lblJob.TabIndex = 38;
@@ -320,7 +295,7 @@
             // 
             this.lblSex.AutoSize = true;
             this.lblSex.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblSex.Location = new System.Drawing.Point(189, 232);
+            this.lblSex.Location = new System.Drawing.Point(189, 203);
             this.lblSex.Name = "lblSex";
             this.lblSex.Size = new System.Drawing.Size(48, 29);
             this.lblSex.TabIndex = 39;
@@ -330,7 +305,7 @@
             // 
             this.lblLivingArea.AutoSize = true;
             this.lblLivingArea.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblLivingArea.Location = new System.Drawing.Point(189, 261);
+            this.lblLivingArea.Location = new System.Drawing.Point(189, 232);
             this.lblLivingArea.Name = "lblLivingArea";
             this.lblLivingArea.Size = new System.Drawing.Size(133, 29);
             this.lblLivingArea.TabIndex = 40;
@@ -340,7 +315,7 @@
             // 
             this.lblStaticLivingArea.AutoSize = true;
             this.lblStaticLivingArea.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblStaticLivingArea.Location = new System.Drawing.Point(3, 261);
+            this.lblStaticLivingArea.Location = new System.Drawing.Point(3, 232);
             this.lblStaticLivingArea.Name = "lblStaticLivingArea";
             this.lblStaticLivingArea.Size = new System.Drawing.Size(127, 29);
             this.lblStaticLivingArea.TabIndex = 31;
@@ -375,7 +350,6 @@
         private System.Windows.Forms.Label lblStaticEmail;
         private System.Windows.Forms.Label lblStaticRegisteringDate;
         private System.Windows.Forms.Label lblStaticBirthDate;
-        private System.Windows.Forms.Label lblStaticPrivacy;
         private System.Windows.Forms.Label lblStaticFirstName;
         private System.Windows.Forms.Label lblStaticBiography;
         private System.Windows.Forms.Label lblStaticJob;
@@ -383,7 +357,6 @@
         private System.Windows.Forms.Label lblKarma;
         private System.Windows.Forms.Label lblRegisteringDate;
         private System.Windows.Forms.Label lblBirthDate;
-        private System.Windows.Forms.Label lblPrivacy;
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.Label lblBiography;
         private System.Windows.Forms.Label lblJob;
