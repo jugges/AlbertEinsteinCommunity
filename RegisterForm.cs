@@ -27,7 +27,7 @@ namespace AlbertEinsteinCommunity
                     User user = new User();
                     Controller controller = new Controller();
                     user.Username = txtboxUsername.Text;
-                    user.Password = Rework.Crypto.ToSHA(txtboxPassword.Text, Crypto.SHA_Type.SHA256).ToLower();
+                    user.Password = txtboxPassword.Text.ToSHA(Crypto.SHA_Type.SHA256).ToLower();
                     user.Email = txtboxEmail.Text;
                     user.BirthDate = datetimepickerBirthDate.Value;
                     user.FirstName = txtboxFirstName.Text;

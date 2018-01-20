@@ -142,7 +142,7 @@ namespace AlbertEinsteinCommunity
             }
         }
 
-        public List<UserControl> LoadForumList(ThreadList threadList)
+        public List<UserControl> LoadForumList(WelcomeForm threadList)
         {
             try
             {

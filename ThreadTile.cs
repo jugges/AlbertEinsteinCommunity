@@ -24,7 +24,7 @@ namespace AlbertEinsteinCommunity
 
         private void lblThreadMaker_Click(object sender, EventArgs e)
         {
-            InfoForm infoForm = new InfoForm(thread.ThreadMaker);
+            InfoForm infoForm = new InfoForm(thread.ThreadMaker,false);
             infoForm.Show();
         }
     }

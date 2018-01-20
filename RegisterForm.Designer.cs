@@ -39,16 +39,16 @@
             this.lblFirstName = new System.Windows.Forms.Label();
             this.txtboxFirstName = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblLivingArea = new System.Windows.Forms.Label();
             this.comboboxSex = new System.Windows.Forms.ComboBox();
             this.lblSex = new System.Windows.Forms.Label();
             this.txtboxJob = new System.Windows.Forms.TextBox();
             this.lblJob = new System.Windows.Forms.Label();
             this.lblBiography = new System.Windows.Forms.Label();
             this.txtboxBiography = new System.Windows.Forms.TextBox();
+            this.comboboxLivingArea = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnRegister = new System.Windows.Forms.Button();
-            this.comboboxLivingArea = new System.Windows.Forms.ComboBox();
-            this.lblLivingArea = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -193,6 +193,17 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(362, 261);
             this.tableLayoutPanel1.TabIndex = 19;
             // 
+            // lblLivingArea
+            // 
+            this.lblLivingArea.AutoSize = true;
+            this.lblLivingArea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblLivingArea.Font = new System.Drawing.Font("Calibri", 18F);
+            this.lblLivingArea.Location = new System.Drawing.Point(3, 232);
+            this.lblLivingArea.Name = "lblLivingArea";
+            this.lblLivingArea.Size = new System.Drawing.Size(127, 29);
+            this.lblLivingArea.TabIndex = 26;
+            this.lblLivingArea.Text = "Living Area:";
+            // 
             // comboboxSex
             // 
             this.comboboxSex.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -255,6 +266,21 @@
             this.txtboxBiography.Size = new System.Drawing.Size(223, 20);
             this.txtboxBiography.TabIndex = 20;
             // 
+            // comboboxLivingArea
+            // 
+            this.comboboxLivingArea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboboxLivingArea.FormattingEnabled = true;
+            this.comboboxLivingArea.Items.AddRange(new object[] {
+            "Hamerkaz",
+            "Hasharon",
+            "Hatzafon",
+            "Hadarom",
+            "Not Israel"});
+            this.comboboxLivingArea.Location = new System.Drawing.Point(136, 235);
+            this.comboboxLivingArea.Name = "comboboxLivingArea";
+            this.comboboxLivingArea.Size = new System.Drawing.Size(223, 21);
+            this.comboboxLivingArea.TabIndex = 25;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.AutoSize = true;
@@ -285,32 +311,6 @@
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
-            // 
-            // comboboxLivingArea
-            // 
-            this.comboboxLivingArea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboboxLivingArea.FormattingEnabled = true;
-            this.comboboxLivingArea.Items.AddRange(new object[] {
-            "Hamerkaz",
-            "Hasharon",
-            "Hatzafon",
-            "Hadarom",
-            "Not Israel"});
-            this.comboboxLivingArea.Location = new System.Drawing.Point(136, 235);
-            this.comboboxLivingArea.Name = "comboboxLivingArea";
-            this.comboboxLivingArea.Size = new System.Drawing.Size(223, 21);
-            this.comboboxLivingArea.TabIndex = 25;
-            // 
-            // lblLivingArea
-            // 
-            this.lblLivingArea.AutoSize = true;
-            this.lblLivingArea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblLivingArea.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblLivingArea.Location = new System.Drawing.Point(3, 232);
-            this.lblLivingArea.Name = "lblLivingArea";
-            this.lblLivingArea.Size = new System.Drawing.Size(127, 29);
-            this.lblLivingArea.TabIndex = 26;
-            this.lblLivingArea.Text = "Living Area:";
             // 
             // RegisterForm
             // 

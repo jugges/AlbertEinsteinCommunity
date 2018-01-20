@@ -32,6 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Rework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Rework.1.0.12\lib\net45\Rework.dll</HintPath>
     </Reference>
@@ -56,12 +57,6 @@
       <DependentUpon>EditUserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forum.cs" />
-    <Compile Include="ForumList.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ForumList.Designer.cs">
-      <DependentUpon>ForumList.cs</DependentUpon>
-    </Compile>
     <Compile Include="ForumTile.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,12 +84,6 @@
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Thread.cs" />
-    <Compile Include="ThreadList.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ThreadList.Designer.cs">
-      <DependentUpon>ThreadList.cs</DependentUpon>
-    </Compile>
     <Compile Include="ThreadTile.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -110,9 +99,6 @@
     </Compile>
     <EmbeddedResource Include="EditUserForm.resx">
       <DependentUpon>EditUserForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ForumList.resx">
-      <DependentUpon>ForumList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForumTile.resx">
       <DependentUpon>ForumTile.cs</DependentUpon>
@@ -135,9 +121,6 @@
     </Compile>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ThreadList.resx">
-      <DependentUpon>ThreadList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThreadTile.resx">
       <DependentUpon>ThreadTile.cs</DependentUpon>

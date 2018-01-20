@@ -13,8 +13,8 @@ namespace AlbertEinsteinCommunity
     public partial class ForumTile : UserControl
     {
         Forum forum;
-        ThreadList threadList;
-        public ForumTile(Forum forum, ThreadList threadList)
+        WelcomeForm threadList;
+        public ForumTile(Forum forum, WelcomeForm threadList)
         {
             InitializeComponent();
             this.forum = forum;
