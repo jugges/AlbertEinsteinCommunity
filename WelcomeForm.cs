@@ -15,6 +15,7 @@ namespace AlbertEinsteinCommunity
         User user;
         List<UserControl> forumTiles;
         List<UserControl> threadTiles;
+        List<UserControl> replyTiles;
         Controller controller = new Controller();
         public WelcomeForm(User user)
         {
@@ -38,6 +39,8 @@ namespace AlbertEinsteinCommunity
         {
             usernameToolStripMenuItem.Text = user.Username;
             SetForumList();
+            //int vertScrollWidth = SystemInformation.VerticalScrollBarWidth;
+            //forumList.Padding = new Padding(0, 0, vertScrollWidth, 0);
         }
 
         public void SetForumList()
@@ -58,11 +61,25 @@ namespace AlbertEinsteinCommunity
         {
             threadList.Controls.Clear();
             threadList.RowCount = 1;
-            threadTiles = controller.LoadThreadList(forumName);
+            threadTiles = controller.LoadThreadList(forumName,this);
             for (int i = 0; i < threadTiles.Count; i++)
             {
                 threadList.Controls.Add(threadTiles[i]);
                 threadList.SetRow(threadTiles[i], i);
+                //threadList.RowStyles[i].SizeType = SizeType.AutoSize;
+                threadList.RowCount++;
+            }
+        }
+
+        public void SetReplyList(int threadId)
+        {
+            threadList.Controls.Clear();
+            threadList.RowCount = 1;
+            replyTiles = controller.LoadReplyList(threadId);
+            for (int i = 0; i < replyTiles.Count; i++)
+            {
+                threadList.Controls.Add(replyTiles[i]);
+                threadList.SetRow(replyTiles[i], i);
                 //threadList.RowStyles[i].SizeType = SizeType.AutoSize;
                 threadList.RowCount++;
             }

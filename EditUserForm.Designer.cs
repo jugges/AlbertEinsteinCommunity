@@ -269,7 +269,7 @@
             this.ClientSize = new System.Drawing.Size(368, 283);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "EditUserForm";
-            this.Text = "EditUserForm";
+            this.Text = "Edit Profile";
             this.Load += new System.EventHandler(this.EditUserForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

@@ -83,6 +83,13 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reply.cs" />
+    <Compile Include="ReplyTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReplyTile.Designer.cs">
+      <DependentUpon>ReplyTile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Thread.cs" />
     <Compile Include="ThreadTile.cs">
       <SubType>UserControl</SubType>
@@ -121,6 +128,9 @@
     </Compile>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReplyTile.resx">
+      <DependentUpon>ReplyTile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThreadTile.resx">
       <DependentUpon>ThreadTile.cs</DependentUpon>

@@ -13,18 +13,18 @@ namespace AlbertEinsteinCommunity
     public partial class ForumTile : UserControl
     {
         Forum forum;
-        WelcomeForm threadList;
-        public ForumTile(Forum forum, WelcomeForm threadList)
+        WelcomeForm welcomeForm;
+        public ForumTile(Forum forum, WelcomeForm welcomeForm)
         {
             InitializeComponent();
             this.forum = forum;
-            this.threadList = threadList;
+            this.welcomeForm = welcomeForm;
         }
         public Image ForumImage { get => forumBtn.BackgroundImage; set => forumBtn.BackgroundImage = value; }
 
         private void forumBtn_Click(object sender, EventArgs e)
         {
-            threadList.SetThreadList(forum.ForumName);
+            welcomeForm.SetThreadList(forum.ForumName);
             Console.WriteLine(forum.ForumName+forum.ForumAdmin);
         }
     }

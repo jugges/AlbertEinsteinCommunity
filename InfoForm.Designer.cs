@@ -329,7 +329,7 @@
             this.ClientSize = new System.Drawing.Size(514, 407);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "InfoForm";
-            this.Text = "InfoForm";
+            this.Text = "User Profile";
             this.Load += new System.EventHandler(this.InfoForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

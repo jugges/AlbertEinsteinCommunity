@@ -13,10 +13,12 @@ namespace AlbertEinsteinCommunity
     public partial class ThreadTile : UserControl
     {
         Thread thread;
-        public ThreadTile(Thread thread)
+        WelcomeForm welcomeForm;
+        public ThreadTile(Thread thread , WelcomeForm welcomeForm)
         {
             InitializeComponent();
             this.thread = thread;
+            this.welcomeForm = welcomeForm;
             lblThreadName.Text = thread.ThreadName;
             lblThreadMaker.Text = thread.ThreadMaker.Username;
             lblThreadDate.Text = thread.ThreadDate.ToShortDateString();
@@ -26,6 +28,11 @@ namespace AlbertEinsteinCommunity
         {
             InfoForm infoForm = new InfoForm(thread.ThreadMaker,false);
             infoForm.Show();
+        }
+
+        private void lblThreadName_Click(object sender, EventArgs e)
+        {
+            welcomeForm.SetReplyList(thread.ThreadId);
         }
     }
 }

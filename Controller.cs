@@ -125,7 +125,7 @@ namespace AlbertEinsteinCommunity
         {
             try
             {
-                command.CommandText = "UPDATE Users SET [email] = '"+user.Email+"', [birthDate] = '"+user.BirthDate.ToShortDateString()+ "', [firstName] = '" + user.FirstName + "', [biography] = '" + user.Biography + "', [job] = '" + user.Job + "', [sex] = '" + user.Sex + "', [livingArea] = '" + user.LivingArea + "' WHERE[username] = '" + user.Username + "'";
+                command.CommandText = "UPDATE Users SET [email] = '" + user.Email + "', [birthDate] = '" + user.BirthDate.ToShortDateString() + "', [firstName] = '" + user.FirstName + "', [biography] = '" + user.Biography + "', [job] = '" + user.Job + "', [sex] = '" + user.Sex + "', [livingArea] = '" + user.LivingArea + "' WHERE[username] = '" + user.Username + "'";
                 command.CommandType = CommandType.Text;
                 connection.Open();
 
@@ -142,7 +142,7 @@ namespace AlbertEinsteinCommunity
             }
         }
 
-        public List<UserControl> LoadForumList(WelcomeForm threadList)
+        public List<UserControl> LoadForumList(WelcomeForm welcomeForm)
         {
             try
             {
@@ -160,7 +160,7 @@ namespace AlbertEinsteinCommunity
                     Forum forum = new Forum();
                     forum.ForumName = reader["forumName"].ToString();
                     forum.ForumAdmin = controller.IdentifyUser(reader["forumAdmin"].ToString());
-                    ForumTile forumTile = new ForumTile(forum,threadList)
+                    ForumTile forumTile = new ForumTile(forum, welcomeForm)
                     {
                         ForumImage = (Image)rm.GetObject("_" + reader["forumPicture"])
                     };
@@ -178,13 +178,14 @@ namespace AlbertEinsteinCommunity
                     connection.Close();
             }
         }
-        public List<UserControl> LoadThreadList(string forumName)
+
+        public List<UserControl> LoadThreadList(string forumName, WelcomeForm welcomeForm)
         {
             try
             {
                 Controller controller = new Controller();
                 List<UserControl> list = new List<UserControl>();
-                command.CommandText = "SELECT * FROM Threads WHERE forumName='"+forumName+"'";
+                command.CommandText = "SELECT * FROM Threads WHERE forumName='" + forumName + "'";
                 command.CommandType = CommandType.Text;
                 connection.Open();
 
@@ -199,8 +200,44 @@ namespace AlbertEinsteinCommunity
                     thread.ThreadId = (int)reader["threadId"];
                     thread.ThreadName = reader["threadName"].ToString();
                     thread.ThreadMaker = controller.IdentifyUser(reader["threadMaker"].ToString());
-                    ThreadTile threadTile = new ThreadTile(thread);
+                    ThreadTile threadTile = new ThreadTile(thread, welcomeForm);
                     list.Add(threadTile);
+                }
+                return list;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+        }
+
+        public List<UserControl> LoadReplyList(int threadId)
+        {
+            try
+            {
+                Controller controller = new Controller();
+                List<UserControl> list = new List<UserControl>();
+                command.CommandText = "SELECT * FROM Replys WHERE threadId=" + threadId + "";
+                command.CommandType = CommandType.Text;
+                connection.Open();
+
+                OleDbDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Reply reply = new Reply();
+                    reply.ThreadId = threadId;
+                    reply.ReplyId = (int)reader["replyId"];
+                    reply.ReplyDate = (DateTime)reader["replyDate"];
+                    reply.ReplyContent = reader["replyContent"].ToString();
+                    reply.ReplyMaker = controller.IdentifyUser(reader["replyMaker"].ToString());
+                    ReplyTile replyTile = new ReplyTile(reply);
+                    list.Add(replyTile);
                 }
                 return list;
             }
