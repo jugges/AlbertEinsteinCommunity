@@ -90,6 +90,12 @@
     <Compile Include="ReplyTile.Designer.cs">
       <DependentUpon>ReplyTile.cs</DependentUpon>
     </Compile>
+    <Compile Include="RTFEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RTFEditorForm.Designer.cs">
+      <DependentUpon>RTFEditorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Thread.cs" />
     <Compile Include="ThreadTile.cs">
       <SubType>UserControl</SubType>
@@ -103,6 +109,12 @@
     </Compile>
     <Compile Include="WelcomeForm.Designer.cs">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WYSIWYG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WYSIWYG.Designer.cs">
+      <DependentUpon>WYSIWYG.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="EditUserForm.resx">
       <DependentUpon>EditUserForm.cs</DependentUpon>
@@ -132,11 +144,17 @@
     <EmbeddedResource Include="ReplyTile.resx">
       <DependentUpon>ReplyTile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RTFEditorForm.resx">
+      <DependentUpon>RTFEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThreadTile.resx">
       <DependentUpon>ThreadTile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeForm.resx">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WYSIWYG.resx">
+      <DependentUpon>WYSIWYG.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -152,7 +170,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\7.png" />
   </ItemGroup>
@@ -182,6 +199,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\justifyright.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\justifycenter.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\justifyleft.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\italic.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bold.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullist.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forecolor.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\underline.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strikethrough.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backcolor.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indent.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outdent.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

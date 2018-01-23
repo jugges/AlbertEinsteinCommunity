@@ -12,7 +12,7 @@ namespace AlbertEinsteinCommunity
 {
     public partial class WelcomeForm : Form
     {
-        User user;
+        public User user;
         List<UserControl> forumTiles;
         List<UserControl> threadTiles;
         List<UserControl> replyTiles;
@@ -30,8 +30,7 @@ namespace AlbertEinsteinCommunity
             Properties.Settings.Default.Password = "";
             Properties.Settings.Default.RememberMe = false;
             Properties.Settings.Default.Save();
-            LoginForm loginForm = new LoginForm();
-            loginForm.ShowDialog();
+            new LoginForm().ShowDialog();
             this.Close();
         }
 
@@ -75,7 +74,7 @@ namespace AlbertEinsteinCommunity
         {
             threadList.Controls.Clear();
             threadList.RowCount = 1;
-            replyTiles = controller.LoadReplyList(threadId);
+            replyTiles = controller.LoadReplyList(threadId,this,controller.GetThread(threadId));
             for (int i = 0; i < replyTiles.Count; i++)
             {
                 threadList.Controls.Add(replyTiles[i]);
@@ -87,8 +86,12 @@ namespace AlbertEinsteinCommunity
 
         private void infoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            InfoForm infoForm = new InfoForm(user,true);
-            infoForm.Show();
+            new InfoForm(user,true).Show();
+        }
+
+        private void wYSIWYGToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new RTFEditorForm().Show();
         }
     }
 }

@@ -28,13 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.usernameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.wYSIWYGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.threadList = new System.Windows.Forms.TableLayoutPanel();
             this.forumList = new System.Windows.Forms.TableLayoutPanel();
+            this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this.TopToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this.RightToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this.LeftToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
+            this.threadList = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip.SuspendLayout();
             this.tableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +62,8 @@
             // 
             this.usernameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.infoToolStripMenuItem,
-            this.logoutToolStripMenuItem});
+            this.logoutToolStripMenuItem,
+            this.wYSIWYGToolStripMenuItem});
             this.usernameToolStripMenuItem.Name = "usernameToolStripMenuItem";
             this.usernameToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.usernameToolStripMenuItem.Text = "USERNAME";
@@ -73,6 +82,18 @@
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
+            // notifyIcon
+            // 
+            this.notifyIcon.Text = "notifyIcon1";
+            this.notifyIcon.Visible = true;
+            // 
+            // wYSIWYGToolStripMenuItem
+            // 
+            this.wYSIWYGToolStripMenuItem.Name = "wYSIWYGToolStripMenuItem";
+            this.wYSIWYGToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.wYSIWYGToolStripMenuItem.Text = "WYSIWYG";
+            this.wYSIWYGToolStripMenuItem.Click += new System.EventHandler(this.wYSIWYGToolStripMenuItem_Click);
+            // 
             // tableLayoutPanel
             // 
             this.tableLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -88,20 +109,6 @@
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel.Size = new System.Drawing.Size(984, 583);
             this.tableLayoutPanel.TabIndex = 2;
-            // 
-            // threadList
-            // 
-            this.threadList.AutoScroll = true;
-            this.threadList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
-            this.threadList.ColumnCount = 1;
-            this.threadList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.threadList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.threadList.Location = new System.Drawing.Point(3, 3);
-            this.threadList.Name = "threadList";
-            this.threadList.RowCount = 1;
-            this.threadList.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.threadList.Size = new System.Drawing.Size(795, 577);
-            this.threadList.TabIndex = 7;
             // 
             // forumList
             // 
@@ -119,6 +126,58 @@
             this.forumList.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.forumList.Size = new System.Drawing.Size(177, 577);
             this.forumList.TabIndex = 4;
+            // 
+            // BottomToolStripPanel
+            // 
+            this.BottomToolStripPanel.Location = new System.Drawing.Point(0, 0);
+            this.BottomToolStripPanel.Name = "BottomToolStripPanel";
+            this.BottomToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.BottomToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.BottomToolStripPanel.Size = new System.Drawing.Size(0, 0);
+            // 
+            // TopToolStripPanel
+            // 
+            this.TopToolStripPanel.Location = new System.Drawing.Point(0, 0);
+            this.TopToolStripPanel.Name = "TopToolStripPanel";
+            this.TopToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.TopToolStripPanel.Padding = new System.Windows.Forms.Padding(0, 0, 25, 25);
+            this.TopToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.TopToolStripPanel.Size = new System.Drawing.Size(0, 0);
+            // 
+            // RightToolStripPanel
+            // 
+            this.RightToolStripPanel.Location = new System.Drawing.Point(0, 0);
+            this.RightToolStripPanel.Name = "RightToolStripPanel";
+            this.RightToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.RightToolStripPanel.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.RightToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.RightToolStripPanel.Size = new System.Drawing.Size(0, 0);
+            // 
+            // LeftToolStripPanel
+            // 
+            this.LeftToolStripPanel.Location = new System.Drawing.Point(0, 0);
+            this.LeftToolStripPanel.Name = "LeftToolStripPanel";
+            this.LeftToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.LeftToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.LeftToolStripPanel.Size = new System.Drawing.Size(0, 0);
+            // 
+            // ContentPanel
+            // 
+            this.ContentPanel.Size = new System.Drawing.Size(150, 150);
+            // 
+            // threadList
+            // 
+            this.threadList.AutoScroll = true;
+            this.threadList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
+            this.threadList.ColumnCount = 1;
+            this.threadList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.threadList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.threadList.Location = new System.Drawing.Point(3, 3);
+            this.threadList.Name = "threadList";
+            this.threadList.RowCount = 1;
+            this.threadList.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.threadList.Size = new System.Drawing.Size(795, 577);
+            this.threadList.TabIndex = 7;
             // 
             // WelcomeForm
             // 
@@ -145,8 +204,15 @@
         private System.Windows.Forms.ToolStripMenuItem usernameToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.ToolStripMenuItem wYSIWYGToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
         private System.Windows.Forms.TableLayoutPanel threadList;
         private System.Windows.Forms.TableLayoutPanel forumList;
+        private System.Windows.Forms.ToolStripPanel BottomToolStripPanel;
+        private System.Windows.Forms.ToolStripPanel TopToolStripPanel;
+        private System.Windows.Forms.ToolStripPanel RightToolStripPanel;
+        private System.Windows.Forms.ToolStripPanel LeftToolStripPanel;
+        private System.Windows.Forms.ToolStripContentPanel ContentPanel;
     }
 }
