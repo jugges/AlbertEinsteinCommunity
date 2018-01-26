@@ -61,8 +61,8 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.lblReplyDate, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblReplyMaker, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblReplyDate, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblReplyMaker, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -76,9 +76,9 @@
             this.lblReplyDate.AutoSize = true;
             this.lblReplyDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblReplyDate.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReplyDate.Location = new System.Drawing.Point(144, 0);
+            this.lblReplyDate.Location = new System.Drawing.Point(3, 0);
             this.lblReplyDate.Name = "lblReplyDate";
-            this.lblReplyDate.Size = new System.Drawing.Size(631, 34);
+            this.lblReplyDate.Size = new System.Drawing.Size(98, 34);
             this.lblReplyDate.TabIndex = 2;
             this.lblReplyDate.Text = "REPLY DATE";
             this.lblReplyDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -89,11 +89,12 @@
             this.lblReplyMaker.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblReplyMaker.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblReplyMaker.Font = new System.Drawing.Font("Calibri", 16F);
-            this.lblReplyMaker.Location = new System.Drawing.Point(3, 0);
+            this.lblReplyMaker.Location = new System.Drawing.Point(107, 0);
             this.lblReplyMaker.Name = "lblReplyMaker";
-            this.lblReplyMaker.Size = new System.Drawing.Size(135, 34);
+            this.lblReplyMaker.Size = new System.Drawing.Size(668, 34);
             this.lblReplyMaker.TabIndex = 1;
             this.lblReplyMaker.Text = "REPLY MAKER";
+            this.lblReplyMaker.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblReplyMaker.Click += new System.EventHandler(this.lblReplyMaker_Click);
             // 
             // richtextboxReplyContent

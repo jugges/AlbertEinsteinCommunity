@@ -423,6 +423,7 @@
             this.txtboxThreadName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtboxThreadName.Location = new System.Drawing.Point(162, 3);
             this.txtboxThreadName.Name = "txtboxThreadName";
+            this.txtboxThreadName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtboxThreadName.Size = new System.Drawing.Size(425, 20);
             this.txtboxThreadName.TabIndex = 1;
             // 

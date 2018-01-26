@@ -28,43 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.lblThreadName = new System.Windows.Forms.Label();
-            this.lblThreadMaker = new System.Windows.Forms.Label();
             this.lblThreadDate = new System.Windows.Forms.Label();
+            this.lblThreadMaker = new System.Windows.Forms.Label();
+            this.lblThreadName = new System.Windows.Forms.Label();
+            this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel
+            // lblThreadDate
             // 
-            this.tableLayoutPanel.ColumnCount = 2;
-            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.62944F));
-            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.37056F));
-            this.tableLayoutPanel.Controls.Add(this.lblThreadName, 0, 0);
-            this.tableLayoutPanel.Controls.Add(this.lblThreadMaker, 0, 1);
-            this.tableLayoutPanel.Controls.Add(this.lblThreadDate, 1, 1);
-            this.tableLayoutPanel.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel.Name = "tableLayoutPanel";
-            this.tableLayoutPanel.RowCount = 2;
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel.Size = new System.Drawing.Size(784, 73);
-            this.tableLayoutPanel.TabIndex = 0;
-            // 
-            // lblThreadName
-            // 
-            this.lblThreadName.AutoSize = true;
-            this.lblThreadName.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblThreadName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblThreadName.Font = new System.Drawing.Font("Calibri", 20.25F);
-            this.lblThreadName.Location = new System.Drawing.Point(3, 0);
-            this.lblThreadName.Name = "lblThreadName";
-            this.lblThreadName.Size = new System.Drawing.Size(649, 43);
-            this.lblThreadName.TabIndex = 0;
-            this.lblThreadName.Text = "THREAD NAME";
-            this.lblThreadName.Click += new System.EventHandler(this.lblThreadName_Click);
+            this.lblThreadDate.AutoSize = true;
+            this.lblThreadDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblThreadDate.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThreadDate.Location = new System.Drawing.Point(3, 43);
+            this.lblThreadDate.Name = "lblThreadDate";
+            this.lblThreadDate.Size = new System.Drawing.Size(141, 30);
+            this.lblThreadDate.TabIndex = 2;
+            this.lblThreadDate.Text = "THREAD DATE";
             // 
             // lblThreadMaker
             // 
@@ -72,23 +52,46 @@
             this.lblThreadMaker.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblThreadMaker.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblThreadMaker.Font = new System.Drawing.Font("Calibri", 16F);
-            this.lblThreadMaker.Location = new System.Drawing.Point(3, 43);
+            this.lblThreadMaker.Location = new System.Drawing.Point(150, 43);
             this.lblThreadMaker.Name = "lblThreadMaker";
-            this.lblThreadMaker.Size = new System.Drawing.Size(649, 30);
+            this.lblThreadMaker.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblThreadMaker.Size = new System.Drawing.Size(631, 30);
             this.lblThreadMaker.TabIndex = 1;
             this.lblThreadMaker.Text = "THREAD MAKER";
             this.lblThreadMaker.Click += new System.EventHandler(this.lblThreadMaker_Click);
             // 
-            // lblThreadDate
+            // lblThreadName
             // 
-            this.lblThreadDate.AutoSize = true;
-            this.lblThreadDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblThreadDate.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThreadDate.Location = new System.Drawing.Point(658, 43);
-            this.lblThreadDate.Name = "lblThreadDate";
-            this.lblThreadDate.Size = new System.Drawing.Size(123, 30);
-            this.lblThreadDate.TabIndex = 2;
-            this.lblThreadDate.Text = "THREAD DATE";
+            this.lblThreadName.AutoSize = true;
+            this.lblThreadName.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblThreadName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblThreadName.Font = new System.Drawing.Font("Calibri", 20.25F);
+            this.lblThreadName.Location = new System.Drawing.Point(150, 0);
+            this.lblThreadName.Name = "lblThreadName";
+            this.lblThreadName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblThreadName.Size = new System.Drawing.Size(631, 43);
+            this.lblThreadName.TabIndex = 0;
+            this.lblThreadName.Text = "THREAD NAME";
+            this.lblThreadName.Click += new System.EventHandler(this.lblThreadName_Click);
+            // 
+            // tableLayoutPanel
+            // 
+            this.tableLayoutPanel.ColumnCount = 2;
+            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.75F));
+            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.25F));
+            this.tableLayoutPanel.Controls.Add(this.lblThreadName, 1, 0);
+            this.tableLayoutPanel.Controls.Add(this.lblThreadMaker, 1, 1);
+            this.tableLayoutPanel.Controls.Add(this.lblThreadDate, 0, 1);
+            this.tableLayoutPanel.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel.Name = "tableLayoutPanel";
+            this.tableLayoutPanel.RowCount = 2;
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel.Size = new System.Drawing.Size(784, 73);
+            this.tableLayoutPanel.TabIndex = 0;
             // 
             // ThreadTile
             // 
@@ -107,9 +110,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
-        private System.Windows.Forms.Label lblThreadName;
-        private System.Windows.Forms.Label lblThreadMaker;
         private System.Windows.Forms.Label lblThreadDate;
+        private System.Windows.Forms.Label lblThreadMaker;
+        private System.Windows.Forms.Label lblThreadName;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
     }
 }
