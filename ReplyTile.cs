@@ -30,7 +30,7 @@ namespace AlbertEinsteinCommunity
 
         private void lblReplyMaker_Click(object sender, EventArgs e)
         {
-            new InfoForm(reply.ReplyMaker, isMine).Show();
+            new InfoForm(reply.ReplyMaker, isMine).ShowDialog();
         }
     }
 }

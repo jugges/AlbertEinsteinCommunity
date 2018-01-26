@@ -34,27 +34,26 @@
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.wYSIWYGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.forumList = new System.Windows.Forms.TableLayoutPanel();
             this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.TopToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.RightToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.LeftToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
+            this.forumList = new System.Windows.Forms.TableLayoutPanel();
             this.threadList = new System.Windows.Forms.TableLayoutPanel();
+            this.adminPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
-            this.tableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
             // 
             this.menuStrip.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usernameToolStripMenuItem});
+            this.usernameToolStripMenuItem,
+            this.adminPanelToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(984, 24);
+            this.menuStrip.Size = new System.Drawing.Size(1130, 24);
             this.menuStrip.TabIndex = 1;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -62,8 +61,7 @@
             // 
             this.usernameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.infoToolStripMenuItem,
-            this.logoutToolStripMenuItem,
-            this.wYSIWYGToolStripMenuItem});
+            this.logoutToolStripMenuItem});
             this.usernameToolStripMenuItem.Name = "usernameToolStripMenuItem";
             this.usernameToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.usernameToolStripMenuItem.Text = "USERNAME";
@@ -86,46 +84,6 @@
             // 
             this.notifyIcon.Text = "notifyIcon1";
             this.notifyIcon.Visible = true;
-            // 
-            // wYSIWYGToolStripMenuItem
-            // 
-            this.wYSIWYGToolStripMenuItem.Name = "wYSIWYGToolStripMenuItem";
-            this.wYSIWYGToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.wYSIWYGToolStripMenuItem.Text = "WYSIWYG";
-            this.wYSIWYGToolStripMenuItem.Click += new System.EventHandler(this.wYSIWYGToolStripMenuItem_Click);
-            // 
-            // tableLayoutPanel
-            // 
-            this.tableLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel.ColumnCount = 2;
-            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel.Controls.Add(this.threadList, 0, 0);
-            this.tableLayoutPanel.Controls.Add(this.forumList, 1, 0);
-            this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel.Location = new System.Drawing.Point(0, 24);
-            this.tableLayoutPanel.Name = "tableLayoutPanel";
-            this.tableLayoutPanel.RowCount = 1;
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel.Size = new System.Drawing.Size(984, 583);
-            this.tableLayoutPanel.TabIndex = 2;
-            // 
-            // forumList
-            // 
-            this.forumList.AutoScroll = true;
-            this.forumList.AutoSize = true;
-            this.forumList.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.forumList.BackColor = System.Drawing.SystemColors.Control;
-            this.forumList.ColumnCount = 1;
-            this.forumList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.forumList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.forumList.Location = new System.Drawing.Point(804, 3);
-            this.forumList.Name = "forumList";
-            this.forumList.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.forumList.RowCount = 1;
-            this.forumList.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.forumList.Size = new System.Drawing.Size(177, 577);
-            this.forumList.TabIndex = 4;
             // 
             // BottomToolStripPanel
             // 
@@ -165,6 +123,21 @@
             // 
             this.ContentPanel.Size = new System.Drawing.Size(150, 150);
             // 
+            // forumList
+            // 
+            this.forumList.AutoScroll = true;
+            this.forumList.BackColor = System.Drawing.SystemColors.Control;
+            this.forumList.ColumnCount = 1;
+            this.forumList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.forumList.Dock = System.Windows.Forms.DockStyle.Right;
+            this.forumList.Location = new System.Drawing.Point(959, 24);
+            this.forumList.Name = "forumList";
+            this.forumList.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.forumList.RowCount = 1;
+            this.forumList.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.forumList.Size = new System.Drawing.Size(171, 643);
+            this.forumList.TabIndex = 8;
+            // 
             // threadList
             // 
             this.threadList.AutoScroll = true;
@@ -172,19 +145,26 @@
             this.threadList.ColumnCount = 1;
             this.threadList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.threadList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.threadList.Location = new System.Drawing.Point(3, 3);
+            this.threadList.Location = new System.Drawing.Point(0, 24);
             this.threadList.Name = "threadList";
             this.threadList.RowCount = 1;
             this.threadList.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.threadList.Size = new System.Drawing.Size(795, 577);
-            this.threadList.TabIndex = 7;
+            this.threadList.Size = new System.Drawing.Size(959, 643);
+            this.threadList.TabIndex = 11;
+            // 
+            // adminPanelToolStripMenuItem
+            // 
+            this.adminPanelToolStripMenuItem.Name = "adminPanelToolStripMenuItem";
+            this.adminPanelToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.adminPanelToolStripMenuItem.Text = "Admin Panel";
             // 
             // WelcomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 607);
-            this.Controls.Add(this.tableLayoutPanel);
+            this.ClientSize = new System.Drawing.Size(1130, 667);
+            this.Controls.Add(this.threadList);
+            this.Controls.Add(this.forumList);
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
             this.Name = "WelcomeForm";
@@ -192,8 +172,6 @@
             this.Load += new System.EventHandler(this.WelcomeForm_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            this.tableLayoutPanel.ResumeLayout(false);
-            this.tableLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,14 +183,13 @@
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.NotifyIcon notifyIcon;
-        private System.Windows.Forms.ToolStripMenuItem wYSIWYGToolStripMenuItem;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
-        private System.Windows.Forms.TableLayoutPanel threadList;
-        private System.Windows.Forms.TableLayoutPanel forumList;
         private System.Windows.Forms.ToolStripPanel BottomToolStripPanel;
         private System.Windows.Forms.ToolStripPanel TopToolStripPanel;
         private System.Windows.Forms.ToolStripPanel RightToolStripPanel;
         private System.Windows.Forms.ToolStripPanel LeftToolStripPanel;
         private System.Windows.Forms.ToolStripContentPanel ContentPanel;
+        private System.Windows.Forms.TableLayoutPanel forumList;
+        private System.Windows.Forms.TableLayoutPanel threadList;
+        private System.Windows.Forms.ToolStripMenuItem adminPanelToolStripMenuItem;
     }
 }

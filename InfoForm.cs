@@ -69,8 +69,7 @@ namespace AlbertEinsteinCommunity
             string passwordCheck = controller.PasswordCheck(user.Username);
             if (passwordEnter == passwordCheck)
             {
-                EditUserForm editUserForm = new EditUserForm(user, this);
-                editUserForm.Show();
+                new EditUserForm(user, this).ShowDialog();
             }
             else
                 MessageBox.Show(null, "There was an error, wrong password", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);

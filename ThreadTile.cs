@@ -25,12 +25,12 @@ namespace AlbertEinsteinCommunity
                 tableLayoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(140)))), ((int)(((byte)(177)))));
             lblThreadName.Text = thread.ThreadName;
             lblThreadMaker.Text = thread.ThreadMaker.Username;
-            lblThreadDate.Text = thread.ThreadDate.ToShortDateString();
+            lblThreadDate.Text = thread.ThreadDate.ToShortDateString() + " " + thread.ThreadDate.ToShortTimeString();
         }
 
         private void lblThreadMaker_Click(object sender, EventArgs e)
         {
-            new InfoForm(thread.ThreadMaker,isMine).Show();
+            new InfoForm(thread.ThreadMaker,isMine).ShowDialog();
         }
 
         private void lblThreadName_Click(object sender, EventArgs e)

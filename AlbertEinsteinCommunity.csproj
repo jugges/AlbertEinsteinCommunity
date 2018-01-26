@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddTile.Designer.cs">
+      <DependentUpon>AddTile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="EditUserForm.cs">
       <SubType>Form</SubType>
@@ -116,6 +122,9 @@
     <Compile Include="WYSIWYG.Designer.cs">
       <DependentUpon>WYSIWYG.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddTile.resx">
+      <DependentUpon>AddTile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditUserForm.resx">
       <DependentUpon>EditUserForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +250,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\outdent.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

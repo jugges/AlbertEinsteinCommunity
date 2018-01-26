@@ -32,16 +32,12 @@ namespace AlbertEinsteinCommunity
         {
             try
             {
-                command.CommandText = "INSERT INTO Users ([username], [password], [email], birthDate, privacy, firstName, biography, job, sex, livingArea) VALUES('" + user.Username + "', '" + user.Password + "', '" + user.Email + "', '" + user.BirthDate.ToShortDateString() + "', '" + user.FirstName + "', '" + user.Biography + "', '" + user.Job + "', '" + user.Sex + "', '" + user.LivingArea + "')";
+                command.CommandText = "INSERT INTO Users ([username], [password], [email], birthDate, firstName, biography, job, sex, livingArea) VALUES('" + user.Username + "', '" + user.Password + "', '" + user.Email + "', '" + user.BirthDate.ToShortDateString() + "', '" + user.FirstName + "', '" + user.Biography + "', '" + user.Job + "', '" + user.Sex + "', '" + user.LivingArea + "')";
                 //command.CommandText = "INSERT INTO Users ([username], [password], [email], birthDate, privacy, firstName, biography, job, sex, livingArea) VALUES ('', '', '', '', '', '', '', '', '', '')";
                 command.CommandType = CommandType.Text;
                 connection.Open();
 
                 command.ExecuteNonQuery();
-            }
-            catch (Exception)
-            {
-                throw;
             }
             finally
             {
@@ -65,10 +61,6 @@ namespace AlbertEinsteinCommunity
                     return (reader["password"].ToString());
                 }
                 return "error";
-            }
-            catch (Exception)
-            {
-                throw;
             }
             finally
             {
@@ -110,10 +102,6 @@ namespace AlbertEinsteinCommunity
                 }
                 return user;
             }
-            catch (Exception)
-            {
-                throw;
-            }
             finally
             {
                 if (connection != null)
@@ -130,10 +118,6 @@ namespace AlbertEinsteinCommunity
                 connection.Open();
 
                 command.ExecuteNonQuery();
-            }
-            catch (Exception)
-            {
-                throw;
             }
             finally
             {
@@ -168,10 +152,6 @@ namespace AlbertEinsteinCommunity
                 }
                 return list;
             }
-            catch (Exception)
-            {
-                throw;
-            }
             finally
             {
                 if (connection != null)
@@ -185,6 +165,7 @@ namespace AlbertEinsteinCommunity
             {
                 Controller controller = new Controller();
                 List<UserControl> list = new List<UserControl>();
+                list.Add(new AddTile(welcomeForm));
                 command.CommandText = "SELECT * FROM Threads WHERE forumName='" + forumName + "' ORDER BY threadId DESC";
                 command.CommandType = CommandType.Text;
                 connection.Open();
@@ -205,10 +186,6 @@ namespace AlbertEinsteinCommunity
                 }
                 return list;
             }
-            catch (Exception)
-            {
-                throw;
-            }
             finally
             {
                 if (connection != null)
@@ -222,7 +199,8 @@ namespace AlbertEinsteinCommunity
             {
                 Controller controller = new Controller();
                 List<UserControl> list = new List<UserControl>();
-                command.CommandText = "SELECT * FROM Replys WHERE threadId=" + threadId + " ORDER BY replyId ASC";
+                list.Add(new AddTile(welcomeForm));
+                command.CommandText = "SELECT * FROM Replies WHERE threadId=" + threadId + " ORDER BY replyId ASC";
                 command.CommandType = CommandType.Text;
                 connection.Open();
 
@@ -252,10 +230,6 @@ namespace AlbertEinsteinCommunity
                     list.Add(replyTile);
                 }
                 return list;
-            }
-            catch (Exception)
-            {
-                throw;
             }
             finally
             {
@@ -290,6 +264,40 @@ namespace AlbertEinsteinCommunity
             catch (Exception)
             {
                 throw;
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+        }
+
+        public void AddReply(Reply reply)
+        {
+            try
+            {
+                command.CommandText = "INSERT INTO Replies (replyContent, threadId, replyMaker) VALUES(\"" + reply.ReplyContent + "\", " + reply.ThreadId + ", '" + reply.ReplyMaker.Username + "')";
+                command.CommandType = CommandType.Text;
+                connection.Open();
+
+                command.ExecuteNonQuery();
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+        }
+
+        public void AddThread(Thread thread)
+        {
+            try
+            {
+                command.CommandText = "INSERT INTO Threads (forumName, threadName, threadMaker, threadContent) VALUES('" + thread.ForumName + "', '" + thread.ThreadName + "', '"+thread.ThreadMaker.Username+ "', \"" + thread.ThreadContent + "\")";
+                command.CommandType = CommandType.Text;
+                connection.Open();
+
+                command.ExecuteNonQuery();
             }
             finally
             {
