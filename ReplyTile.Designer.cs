@@ -31,10 +31,12 @@
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblReplyDate = new System.Windows.Forms.Label();
-            this.lblReplyMaker = new System.Windows.Forms.Label();
             this.richtextboxReplyContent = new System.Windows.Forms.RichTextBox();
+            this.lblReplyMaker = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel
@@ -53,16 +55,18 @@
             this.tableLayoutPanel.RowCount = 2;
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel.Size = new System.Drawing.Size(784, 173);
+            this.tableLayoutPanel.Size = new System.Drawing.Size(784, 220);
             this.tableLayoutPanel.TabIndex = 1;
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.Controls.Add(this.lblReplyDate, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblReplyMaker, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblReplyMaker, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -78,24 +82,10 @@
             this.lblReplyDate.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReplyDate.Location = new System.Drawing.Point(3, 0);
             this.lblReplyDate.Name = "lblReplyDate";
-            this.lblReplyDate.Size = new System.Drawing.Size(98, 34);
+            this.lblReplyDate.Size = new System.Drawing.Size(98, 37);
             this.lblReplyDate.TabIndex = 2;
             this.lblReplyDate.Text = "REPLY DATE";
             this.lblReplyDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblReplyMaker
-            // 
-            this.lblReplyMaker.AutoSize = true;
-            this.lblReplyMaker.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblReplyMaker.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblReplyMaker.Font = new System.Drawing.Font("Calibri", 16F);
-            this.lblReplyMaker.Location = new System.Drawing.Point(107, 0);
-            this.lblReplyMaker.Name = "lblReplyMaker";
-            this.lblReplyMaker.Size = new System.Drawing.Size(668, 34);
-            this.lblReplyMaker.TabIndex = 1;
-            this.lblReplyMaker.Text = "REPLY MAKER";
-            this.lblReplyMaker.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblReplyMaker.Click += new System.EventHandler(this.lblReplyMaker_Click);
             // 
             // richtextboxReplyContent
             // 
@@ -103,9 +93,33 @@
             this.richtextboxReplyContent.Location = new System.Drawing.Point(3, 43);
             this.richtextboxReplyContent.Name = "richtextboxReplyContent";
             this.richtextboxReplyContent.ReadOnly = true;
-            this.richtextboxReplyContent.Size = new System.Drawing.Size(778, 127);
+            this.richtextboxReplyContent.Size = new System.Drawing.Size(778, 174);
             this.richtextboxReplyContent.TabIndex = 4;
             this.richtextboxReplyContent.Text = "";
+            this.richtextboxReplyContent.WordWrap = false;
+            this.richtextboxReplyContent.ContentsResized += new System.Windows.Forms.ContentsResizedEventHandler(this.richtextboxReplyContent_ContentsResized);
+            // 
+            // lblReplyMaker
+            // 
+            this.lblReplyMaker.AutoSize = true;
+            this.lblReplyMaker.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblReplyMaker.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblReplyMaker.Font = new System.Drawing.Font("Calibri", 16F);
+            this.lblReplyMaker.Location = new System.Drawing.Point(163, 0);
+            this.lblReplyMaker.Name = "lblReplyMaker";
+            this.lblReplyMaker.Size = new System.Drawing.Size(612, 37);
+            this.lblReplyMaker.TabIndex = 4;
+            this.lblReplyMaker.Text = "REPLY MAKER";
+            this.lblReplyMaker.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AlbertEinsteinCommunity.Properties.Resources.save;
+            this.pictureBox1.Location = new System.Drawing.Point(107, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 31);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // ReplyTile
             // 
@@ -116,10 +130,11 @@
             this.BackColor = System.Drawing.SystemColors.Info;
             this.Controls.Add(this.tableLayoutPanel);
             this.Name = "ReplyTile";
-            this.Size = new System.Drawing.Size(784, 173);
+            this.Size = new System.Drawing.Size(784, 220);
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,7 +145,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label lblReplyDate;
-        private System.Windows.Forms.Label lblReplyMaker;
         private System.Windows.Forms.RichTextBox richtextboxReplyContent;
+        private System.Windows.Forms.Label lblReplyMaker;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

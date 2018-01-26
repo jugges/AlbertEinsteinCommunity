@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RTFEditorForm));
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.toolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this.rtb = new System.Windows.Forms.RichTextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsSave = new System.Windows.Forms.ToolStripButton();
+            this.tsImage = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsUndo = new System.Windows.Forms.ToolStripButton();
             this.tsRedo = new System.Windows.Forms.ToolStripButton();
@@ -82,7 +84,7 @@
             this.tableLayoutPanel.RowCount = 2;
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel.Size = new System.Drawing.Size(596, 480);
+            this.tableLayoutPanel.Size = new System.Drawing.Size(608, 480);
             this.tableLayoutPanel.TabIndex = 0;
             // 
             // toolStripContainer
@@ -91,11 +93,11 @@
             // toolStripContainer.ContentPanel
             // 
             this.toolStripContainer.ContentPanel.Controls.Add(this.rtb);
-            this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(590, 415);
+            this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(602, 415);
             this.toolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer.Location = new System.Drawing.Point(3, 38);
             this.toolStripContainer.Name = "toolStripContainer";
-            this.toolStripContainer.Size = new System.Drawing.Size(590, 442);
+            this.toolStripContainer.Size = new System.Drawing.Size(602, 442);
             this.toolStripContainer.TabIndex = 4;
             this.toolStripContainer.Text = "toolStripContainer1";
             // 
@@ -111,7 +113,7 @@
             this.rtb.Location = new System.Drawing.Point(0, 0);
             this.rtb.Name = "rtb";
             this.rtb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rtb.Size = new System.Drawing.Size(590, 415);
+            this.rtb.Size = new System.Drawing.Size(602, 415);
             this.rtb.TabIndex = 1;
             this.rtb.TabStop = false;
             this.rtb.Text = "";
@@ -122,6 +124,7 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsSave,
+            this.tsImage,
             this.toolStripSeparator4,
             this.tsUndo,
             this.tsRedo,
@@ -146,7 +149,7 @@
             this.tsFontType});
             this.toolStrip1.Location = new System.Drawing.Point(3, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(566, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(599, 27);
             this.toolStrip1.TabIndex = 0;
             // 
             // tsSave
@@ -157,6 +160,16 @@
             this.tsSave.Size = new System.Drawing.Size(51, 24);
             this.tsSave.Text = "Save";
             this.tsSave.Click += new System.EventHandler(this.TsSave_Click);
+            // 
+            // tsImage
+            // 
+            this.tsImage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsImage.Image = ((System.Drawing.Image)(resources.GetObject("tsImage.Image")));
+            this.tsImage.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsImage.Name = "tsImage";
+            this.tsImage.Size = new System.Drawing.Size(23, 24);
+            this.tsImage.Text = "toolStripButton1";
+            this.tsImage.Click += new System.EventHandler(this.tsImage_Click);
             // 
             // toolStripSeparator4
             // 
@@ -238,7 +251,7 @@
             // tsLeft
             // 
             this.tsLeft.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsLeft.Image = global::AlbertEinsteinCommunity.Properties.Resources.justifyleft;
+            this.tsLeft.Image = global::AlbertEinsteinCommunity.Properties.Resources.alignleft;
             this.tsLeft.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsLeft.Name = "tsLeft";
             this.tsLeft.Size = new System.Drawing.Size(24, 24);
@@ -248,7 +261,7 @@
             // tsCenter
             // 
             this.tsCenter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsCenter.Image = global::AlbertEinsteinCommunity.Properties.Resources.justifycenter;
+            this.tsCenter.Image = global::AlbertEinsteinCommunity.Properties.Resources.aligncenter;
             this.tsCenter.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsCenter.Name = "tsCenter";
             this.tsCenter.Size = new System.Drawing.Size(24, 24);
@@ -258,7 +271,7 @@
             // tsRight
             // 
             this.tsRight.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsRight.Image = global::AlbertEinsteinCommunity.Properties.Resources.justifyright;
+            this.tsRight.Image = global::AlbertEinsteinCommunity.Properties.Resources.alignright;
             this.tsRight.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsRight.Name = "tsRight";
             this.tsRight.Size = new System.Drawing.Size(24, 24);
@@ -385,7 +398,7 @@
             // 
             this.tsFontType.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.tsFontType.Name = "tsFontType";
-            this.tsFontType.Size = new System.Drawing.Size(61, 24);
+            this.tsFontType.Size = new System.Drawing.Size(61, 19);
             this.tsFontType.Text = "Font type";
             this.tsFontType.Click += new System.EventHandler(this.TsFontType_Click);
             // 
@@ -403,7 +416,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(590, 29);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(602, 29);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // lblThreadName
@@ -424,14 +437,14 @@
             this.txtboxThreadName.Location = new System.Drawing.Point(162, 3);
             this.txtboxThreadName.Name = "txtboxThreadName";
             this.txtboxThreadName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtboxThreadName.Size = new System.Drawing.Size(425, 20);
+            this.txtboxThreadName.Size = new System.Drawing.Size(437, 20);
             this.txtboxThreadName.TabIndex = 1;
             // 
             // RTFEditorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 480);
+            this.ClientSize = new System.Drawing.Size(608, 480);
             this.Controls.Add(this.tableLayoutPanel);
             this.Name = "RTFEditorForm";
             this.Text = "Edit";
@@ -485,5 +498,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label lblThreadName;
         private System.Windows.Forms.TextBox txtboxThreadName;
+        private System.Windows.Forms.ToolStripButton tsImage;
     }
 }

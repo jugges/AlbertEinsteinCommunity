@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
+using System.Net;
 using System.Windows.Forms;
 
 namespace AlbertEinsteinCommunity
@@ -212,6 +214,16 @@ namespace AlbertEinsteinCommunity
             {
                 MessageBox.Show(null, "There was an error, you have to fill the textboxes to save.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void tsImage_Click(object sender, EventArgs e)
+        {
+            WebClient wc = new WebClient();
+            byte[] bytes = wc.DownloadData(Microsoft.VisualBasic.Interaction.InputBox("Enter picture url"));
+            MemoryStream ms = new MemoryStream(bytes);
+            Image img = Image.FromStream(ms);
+            Clipboard.SetImage(img);
+            rtb.Paste();
         }
     }
 }

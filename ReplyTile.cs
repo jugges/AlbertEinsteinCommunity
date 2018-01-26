@@ -13,7 +13,7 @@ namespace AlbertEinsteinCommunity
     public partial class ReplyTile : UserControl
     {
         Reply reply;
-        bool isMine, isMaker;
+        bool isMine;
         public ReplyTile(Reply reply, bool isMine, bool isMaker)
         {
             InitializeComponent();
@@ -31,6 +31,12 @@ namespace AlbertEinsteinCommunity
         private void lblReplyMaker_Click(object sender, EventArgs e)
         {
             new InfoForm(reply.ReplyMaker, isMine).ShowDialog();
+        }
+
+        private void richtextboxReplyContent_ContentsResized(object sender, ContentsResizedEventArgs e)
+        {
+            const int margin = 5;
+            richtextboxReplyContent.Height = e.NewRectangle.Height + margin;
         }
     }
 }

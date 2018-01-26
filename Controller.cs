@@ -19,7 +19,7 @@ namespace AlbertEinsteinCommunity
 
         private void ConnectTo()
         {
-            connection = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\yuval\\source\\repos\\AlbertEinsteinCommunity\\AlbertEinsteinCommunity\\Database5.accdb");
+            connection = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+Program.dbDir);
             command = connection.CreateCommand();
         }
 

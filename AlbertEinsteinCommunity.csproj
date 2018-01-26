@@ -116,12 +116,6 @@
     <Compile Include="WelcomeForm.Designer.cs">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WYSIWYG.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="WYSIWYG.Designer.cs">
-      <DependentUpon>WYSIWYG.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AddTile.resx">
       <DependentUpon>AddTile.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,9 +155,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeForm.resx">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WYSIWYG.resx">
-      <DependentUpon>WYSIWYG.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -253,6 +244,63 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\save.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outdent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editprofile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alignright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aligncenter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alignleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strikethrough.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\italic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\underline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forecolor.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
