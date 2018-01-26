@@ -20,7 +20,7 @@ namespace AlbertEinsteinCommunity
             this.reply = reply;
             this.isMine = isMine;
             if(isMine)
-                tableLayoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(140)))), ((int)(((byte)(177)))));
+                tableLayoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(177)))), ((int)(((byte)(150)))));
             else if (isMaker)
                 tableLayoutPanel.BackColor = Color.PapayaWhip;
             lblReplyMaker.Text = reply.ReplyMaker.Username;

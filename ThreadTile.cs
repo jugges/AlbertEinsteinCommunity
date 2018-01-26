@@ -22,7 +22,7 @@ namespace AlbertEinsteinCommunity
             this.welcomeForm = welcomeForm;
             this.isMine = isMine;
             if (isMine)
-                tableLayoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(140)))), ((int)(((byte)(177)))));
+                tableLayoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(177)))), ((int)(((byte)(150)))));
             lblThreadName.Text = thread.ThreadName;
             lblThreadMaker.Text = thread.ThreadMaker.Username;
             lblThreadDate.Text = thread.ThreadDate.ToShortDateString() + " " + thread.ThreadDate.ToShortTimeString();
