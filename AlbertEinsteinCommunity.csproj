@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,86 +50,87 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddTile.cs">
+    <Compile Include="Objects\Permission.cs" />
+    <Compile Include="User Controls\AddTile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AddTile.Designer.cs">
+    <Compile Include="User Controls\AddTile.Designer.cs">
       <DependentUpon>AddTile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller.cs" />
-    <Compile Include="EditUserForm.cs">
+    <Compile Include="Objects\Controller.cs" />
+    <Compile Include="Forms\EditUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditUserForm.Designer.cs">
+    <Compile Include="Forms\EditUserForm.Designer.cs">
       <DependentUpon>EditUserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forum.cs" />
-    <Compile Include="ForumTile.cs">
+    <Compile Include="Objects\Forum.cs" />
+    <Compile Include="User Controls\ForumTile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ForumTile.Designer.cs">
+    <Compile Include="User Controls\ForumTile.Designer.cs">
       <DependentUpon>ForumTile.cs</DependentUpon>
     </Compile>
-    <Compile Include="InfoForm.cs">
+    <Compile Include="Forms\InfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InfoForm.Designer.cs">
+    <Compile Include="Forms\InfoForm.Designer.cs">
       <DependentUpon>InfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegisterForm.cs">
+    <Compile Include="Forms\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegisterForm.Designer.cs">
+    <Compile Include="Forms\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reply.cs" />
-    <Compile Include="ReplyTile.cs">
+    <Compile Include="Objects\Reply.cs" />
+    <Compile Include="User Controls\ReplyTile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ReplyTile.Designer.cs">
+    <Compile Include="User Controls\ReplyTile.Designer.cs">
       <DependentUpon>ReplyTile.cs</DependentUpon>
     </Compile>
-    <Compile Include="RTFEditorForm.cs">
+    <Compile Include="Forms\RTFEditorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RTFEditorForm.Designer.cs">
+    <Compile Include="Forms\RTFEditorForm.Designer.cs">
       <DependentUpon>RTFEditorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Thread.cs" />
-    <Compile Include="ThreadTile.cs">
+    <Compile Include="Objects\Thread.cs" />
+    <Compile Include="User Controls\ThreadTile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ThreadTile.Designer.cs">
+    <Compile Include="User Controls\ThreadTile.Designer.cs">
       <DependentUpon>ThreadTile.cs</DependentUpon>
     </Compile>
-    <Compile Include="User.cs" />
-    <Compile Include="WelcomeForm.cs">
+    <Compile Include="Objects\User.cs" />
+    <Compile Include="Forms\WelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WelcomeForm.Designer.cs">
+    <Compile Include="Forms\WelcomeForm.Designer.cs">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddTile.resx">
+    <EmbeddedResource Include="User Controls\AddTile.resx">
       <DependentUpon>AddTile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditUserForm.resx">
+    <EmbeddedResource Include="Forms\EditUserForm.resx">
       <DependentUpon>EditUserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ForumTile.resx">
+    <EmbeddedResource Include="User Controls\ForumTile.resx">
       <DependentUpon>ForumTile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InfoForm.resx">
+    <EmbeddedResource Include="Forms\InfoForm.resx">
       <DependentUpon>InfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -141,19 +143,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RegisterForm.resx">
+    <EmbeddedResource Include="Forms\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReplyTile.resx">
+    <EmbeddedResource Include="User Controls\ReplyTile.resx">
       <DependentUpon>ReplyTile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RTFEditorForm.resx">
+    <EmbeddedResource Include="Forms\RTFEditorForm.resx">
       <DependentUpon>RTFEditorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThreadTile.resx">
+    <EmbeddedResource Include="User Controls\ThreadTile.resx">
       <DependentUpon>ThreadTile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WelcomeForm.resx">
+    <EmbeddedResource Include="Forms\WelcomeForm.resx">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -301,6 +303,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\forecolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
