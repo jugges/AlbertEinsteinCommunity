@@ -26,6 +26,7 @@ namespace AlbertEinsteinCommunity
                 tableLayoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(177)))), ((int)(((byte)(150)))));
             else
             {
+                if(!welcomeForm.permissionGranted)
                 picEdit.Dispose();
                 if (isMaker)
                     tableLayoutPanel.BackColor = Color.PapayaWhip;

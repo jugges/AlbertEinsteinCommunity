@@ -34,9 +34,9 @@
             this.txtboxUsername = new System.Windows.Forms.TextBox();
             this.txtboxPassword = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.ckbRememberMe = new System.Windows.Forms.CheckBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.ckbRememberMe = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -123,19 +123,6 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(508, 97);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
-            // ckbRememberMe
-            // 
-            this.ckbRememberMe.AutoSize = true;
-            this.ckbRememberMe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ckbRememberMe.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbRememberMe.Location = new System.Drawing.Point(3, 3);
-            this.ckbRememberMe.Name = "ckbRememberMe";
-            this.ckbRememberMe.Size = new System.Drawing.Size(113, 91);
-            this.ckbRememberMe.TabIndex = 2;
-            this.ckbRememberMe.Text = "Remember";
-            this.ckbRememberMe.UseVisualStyleBackColor = true;
-            this.ckbRememberMe.CheckedChanged += new System.EventHandler(this.ckbRememberMe_CheckedChanged);
-            // 
             // btnRegister
             // 
             this.btnRegister.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -164,6 +151,19 @@
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLoginAccept_Click);
+            // 
+            // ckbRememberMe
+            // 
+            this.ckbRememberMe.AutoSize = true;
+            this.ckbRememberMe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ckbRememberMe.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbRememberMe.Location = new System.Drawing.Point(3, 3);
+            this.ckbRememberMe.Name = "ckbRememberMe";
+            this.ckbRememberMe.Size = new System.Drawing.Size(113, 91);
+            this.ckbRememberMe.TabIndex = 2;
+            this.ckbRememberMe.Text = "Remember";
+            this.ckbRememberMe.UseVisualStyleBackColor = true;
+            this.ckbRememberMe.CheckedChanged += new System.EventHandler(this.ckbRememberMe_CheckedChanged);
             // 
             // LoginForm
             // 

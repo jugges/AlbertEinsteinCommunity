@@ -17,6 +17,8 @@ namespace AlbertEinsteinCommunity
         List<UserControl> replyTiles;
         Controller controller = new Controller();
         public User user;
+        private int permissionLevel = 0;
+        public bool permissionGranted = false;
         private bool replyCreation;
         private int currentThreadId;
         private string currentForumName;
@@ -24,6 +26,16 @@ namespace AlbertEinsteinCommunity
         {
             InitializeComponent();
             this.user = user;
+            string permissionType = user.Permission.PermissionType;
+            if (permissionType == "master")
+            {
+                permissionLevel = 2;
+                permissionGranted = true;
+            }
+            else if (permissionType == "specific")
+                permissionLevel = 1;
+            else
+                permissionLevel = 0;
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -65,16 +77,18 @@ namespace AlbertEinsteinCommunity
             currentForumName = forumName;
             threadList.Controls.Clear();
             threadList.RowCount = 1;
-            threadTiles = controller.LoadThreadList(forumName,this);
+            threadTiles = controller.LoadThreadList(forumName, this);
             for (int i = 0; i < threadTiles.Count; i++)
             {
                 threadList.Controls.Add(threadTiles[i]);
                 threadList.SetRow(threadTiles[i], i);
-                threadTiles[i].Dock=DockStyle.Top;
+                threadTiles[i].Dock = DockStyle.Top;
                 //threadList.RowStyles[i].SizeType = SizeType.AutoSize;
                 threadList.RowCount++;
             }
             replyCreation = false;
+            if (permissionLevel==1)
+                permissionGranted = user.Permission.SpecificPermissionForum == forumName;
         }
 
         public void SetReplyList(int threadId)
@@ -82,7 +96,7 @@ namespace AlbertEinsteinCommunity
             currentThreadId = threadId;
             threadList.Controls.Clear();
             threadList.RowCount = 1;
-            replyTiles = controller.LoadReplyList(threadId,this,controller.GetThread(threadId));
+            replyTiles = controller.LoadReplyList(threadId, this, controller.GetThread(threadId));
             for (int i = 0; i < replyTiles.Count; i++)
             {
                 threadList.Controls.Add(replyTiles[i]);
@@ -102,7 +116,7 @@ namespace AlbertEinsteinCommunity
                 if (replyCreation)
                 {
                     Reply newReply = new Reply();
-                    newReply.ReplyMaker=user;
+                    newReply.ReplyMaker = user;
                     newReply.ReplyContent = rtfEditorForm.rtf;
                     newReply.ThreadId = currentThreadId;
                     controller.AddReply(newReply);
@@ -122,7 +136,7 @@ namespace AlbertEinsteinCommunity
 
         private void infoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new InfoForm(user,true).ShowDialog();
+            new InfoForm(user, true).ShowDialog();
         }
     }
 }

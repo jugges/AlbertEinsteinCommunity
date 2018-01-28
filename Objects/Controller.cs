@@ -74,6 +74,7 @@ namespace AlbertEinsteinCommunity
                 command.CommandType = CommandType.Text;
                 connection.Open();
 
+                Controller controller = new Controller();
                 OleDbDataReader reader = command.ExecuteReader();
                 User user = new User();
 
@@ -96,6 +97,13 @@ namespace AlbertEinsteinCommunity
                     user.Job = reader["job"].ToString();
                     user.Sex = reader["sex"].ToString();
                     user.LivingArea = reader["livingArea"].ToString();
+                    string permission = reader["permission"].ToString();
+                    string forum;
+                    if (permission == "specific")
+                        forum = controller.GetSpecificPermission(username);
+                    else
+                        forum = null;
+                    user.Permission = new Permission(permission,forum);
                 }
                 return user;
             }
@@ -329,6 +337,29 @@ namespace AlbertEinsteinCommunity
                 connection.Open();
 
                 command.ExecuteNonQuery();
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+        }
+
+        public string GetSpecificPermission(string username)
+        {
+            try
+            {
+                command.CommandText = "SELECT [forum] FROM SpecificPermissions WHERE [username]='" + username + "'";
+                command.CommandType = CommandType.Text;
+                connection.Open();
+
+                OleDbDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    return (reader["forum"].ToString());
+                }
+                return "error";
             }
             finally
             {
