@@ -64,7 +64,7 @@ namespace AlbertEinsteinCommunity
             }
             else
             {
-                passwordEnter = Microsoft.VisualBasic.Interaction.InputBox("Enter password to verify yourself to edit you'r profile", "Verification Required", "").ToSHA(Crypto.SHA_Type.SHA256).ToLower();
+                passwordEnter = Microsoft.VisualBasic.Interaction.InputBox("Enter password to verify yourself to edit you'r profile", "Authentication Required", "").ToSHA(Crypto.SHA_Type.SHA256).ToLower();
             }
             string passwordCheck = controller.PasswordCheck(user.Username);
             if (passwordEnter == passwordCheck)

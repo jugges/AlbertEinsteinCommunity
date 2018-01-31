@@ -298,7 +298,8 @@ namespace AlbertEinsteinCommunity
         {
             try
             {
-                command.CommandText = "INSERT INTO Threads (forumName, threadName, threadMaker, threadContent) VALUES('" + thread.ForumName + "', '" + thread.ThreadName + "', '" + thread.ThreadMaker.Username + "', \"" + thread.ThreadContent + "\")";
+                command.CommandText = "INSERT INTO Threads (forumName, threadName, threadMaker, threadContent) VALUES('" + thread.ForumName + "', '" + thread.ThreadName + "', '" + thread.ThreadMaker.Username + "', '" + thread.ThreadContent + "')";
+                string x = command.CommandText;
                 command.CommandType = CommandType.Text;
                 connection.Open();
 
@@ -360,6 +361,40 @@ namespace AlbertEinsteinCommunity
                     return (reader["forum"].ToString());
                 }
                 return "error";
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+        }
+
+        public void DeleteThread(int threadId)
+        {
+            try
+            {
+                command.CommandText = "DELETE * FROM Threads WHERE threadId="+threadId;
+                command.CommandType = CommandType.Text;
+                connection.Open();
+
+                command.ExecuteNonQuery();
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+        }
+
+        public void DeleteReply(int replyId)
+        {
+            try
+            {
+                command.CommandText = "DELETE * FROM Replies WHERE replyId=" + replyId;
+                command.CommandType = CommandType.Text;
+                connection.Open();
+
+                command.ExecuteNonQuery();
             }
             finally
             {

@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtboxUsername = new System.Windows.Forms.TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.txtboxUsername = new System.Windows.Forms.TextBox();
             this.txtboxPassword = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnRegister = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.ckbRememberMe = new System.Windows.Forms.CheckBox();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -48,9 +48,9 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.4252F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.57481F));
+            this.tableLayoutPanel2.Controls.Add(this.txtboxUsername, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblUsername, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblPassword, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtboxUsername, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtboxPassword, 1, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
@@ -61,6 +61,15 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(508, 79);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
+            // txtboxUsername
+            // 
+            this.txtboxUsername.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtboxUsername.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.txtboxUsername.Location = new System.Drawing.Point(122, 3);
+            this.txtboxUsername.Name = "txtboxUsername";
+            this.txtboxUsername.Size = new System.Drawing.Size(383, 33);
+            this.txtboxUsername.TabIndex = 0;
+            // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
@@ -69,7 +78,7 @@
             this.lblUsername.Location = new System.Drawing.Point(3, 0);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(113, 39);
-            this.lblUsername.TabIndex = 0;
+            this.lblUsername.TabIndex = 2;
             this.lblUsername.Text = "Username:";
             // 
             // lblPassword
@@ -80,17 +89,8 @@
             this.lblPassword.Location = new System.Drawing.Point(3, 39);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(113, 40);
-            this.lblPassword.TabIndex = 1;
+            this.lblPassword.TabIndex = 3;
             this.lblPassword.Text = "Password:";
-            // 
-            // txtboxUsername
-            // 
-            this.txtboxUsername.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtboxUsername.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.txtboxUsername.Location = new System.Drawing.Point(122, 3);
-            this.txtboxUsername.Name = "txtboxUsername";
-            this.txtboxUsername.Size = new System.Drawing.Size(383, 33);
-            this.txtboxUsername.TabIndex = 2;
             // 
             // txtboxPassword
             // 
@@ -99,7 +99,7 @@
             this.txtboxPassword.Location = new System.Drawing.Point(122, 42);
             this.txtboxPassword.Name = "txtboxPassword";
             this.txtboxPassword.Size = new System.Drawing.Size(383, 33);
-            this.txtboxPassword.TabIndex = 3;
+            this.txtboxPassword.TabIndex = 1;
             this.txtboxPassword.UseSystemPasswordChar = true;
             this.txtboxPassword.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtboxPassword_MouseDown);
             this.txtboxPassword.MouseUp += new System.Windows.Forms.MouseEventHandler(this.txtboxPassword_MouseUp);
@@ -113,8 +113,8 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.80672F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.87395F));
             this.tableLayoutPanel3.Controls.Add(this.btnRegister, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnLogin, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.ckbRememberMe, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnLogin, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 79);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -133,10 +133,23 @@
             this.btnRegister.Location = new System.Drawing.Point(333, 3);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(172, 91);
-            this.btnRegister.TabIndex = 0;
+            this.btnRegister.TabIndex = 2;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnLoginRegister_Click);
+            // 
+            // ckbRememberMe
+            // 
+            this.ckbRememberMe.AutoSize = true;
+            this.ckbRememberMe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ckbRememberMe.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbRememberMe.Location = new System.Drawing.Point(3, 3);
+            this.ckbRememberMe.Name = "ckbRememberMe";
+            this.ckbRememberMe.Size = new System.Drawing.Size(113, 91);
+            this.ckbRememberMe.TabIndex = 0;
+            this.ckbRememberMe.Text = "Remember";
+            this.ckbRememberMe.UseVisualStyleBackColor = true;
+            this.ckbRememberMe.CheckedChanged += new System.EventHandler(this.ckbRememberMe_CheckedChanged);
             // 
             // btnLogin
             // 
@@ -151,19 +164,6 @@
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLoginAccept_Click);
-            // 
-            // ckbRememberMe
-            // 
-            this.ckbRememberMe.AutoSize = true;
-            this.ckbRememberMe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ckbRememberMe.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbRememberMe.Location = new System.Drawing.Point(3, 3);
-            this.ckbRememberMe.Name = "ckbRememberMe";
-            this.ckbRememberMe.Size = new System.Drawing.Size(113, 91);
-            this.ckbRememberMe.TabIndex = 2;
-            this.ckbRememberMe.Text = "Remember";
-            this.ckbRememberMe.UseVisualStyleBackColor = true;
-            this.ckbRememberMe.CheckedChanged += new System.EventHandler(this.ckbRememberMe_CheckedChanged);
             // 
             // LoginForm
             // 

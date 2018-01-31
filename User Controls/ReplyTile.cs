@@ -26,8 +26,11 @@ namespace AlbertEinsteinCommunity
                 tableLayoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(177)))), ((int)(((byte)(150)))));
             else
             {
-                if(!welcomeForm.permissionGranted)
-                picEdit.Dispose();
+                if (!welcomeForm.permissionGranted)
+                {
+                    picEdit.Dispose();
+                    picDel.Dispose();
+                }
                 if (isMaker)
                     tableLayoutPanel.BackColor = Color.PapayaWhip;
             }
@@ -46,7 +49,7 @@ namespace AlbertEinsteinCommunity
             const int margin = 5;
             richtextboxReplyContent.Height = e.NewRectangle.Height + margin;
         }
-
+        
         private void picEdit_Click(object sender, EventArgs e)
         {
             RTFEditorForm rtfEditorForm = new RTFEditorForm(true);
@@ -66,6 +69,18 @@ namespace AlbertEinsteinCommunity
         private void richtextboxReplyContent_LinkClicked(object sender, LinkClickedEventArgs e)
         {
             Process.Start(e.LinkText);
+        }
+
+        private void picDel_Click(object sender, EventArgs e)
+        {
+            if (reply.IsOp)
+            {
+                if (MessageBox.Show("Are you sure about deleting this thread?", "Authentication Required", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    new Controller().DeleteThread(reply.ThreadId);
+            }
+            else
+                if (MessageBox.Show("Are you sure about deleting this reply?", "Authentication Required", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    new Controller().DeleteReply(reply.ReplyId);
         }
     }
 }

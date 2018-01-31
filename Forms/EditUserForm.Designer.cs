@@ -60,7 +60,7 @@
             this.btnSave.Location = new System.Drawing.Point(3, 289);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(525, 62);
-            this.btnSave.TabIndex = 1;
+            this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -73,7 +73,7 @@
             this.lblLivingArea.Location = new System.Drawing.Point(3, 234);
             this.lblLivingArea.Name = "lblLivingArea";
             this.lblLivingArea.Size = new System.Drawing.Size(111, 46);
-            this.lblLivingArea.TabIndex = 26;
+            this.lblLivingArea.TabIndex = 13;
             this.lblLivingArea.Text = "Living Area:";
             // 
             // comboboxSex
@@ -88,7 +88,7 @@
             this.comboboxSex.Location = new System.Drawing.Point(120, 198);
             this.comboboxSex.Name = "comboboxSex";
             this.comboboxSex.Size = new System.Drawing.Size(402, 34);
-            this.comboboxSex.TabIndex = 24;
+            this.comboboxSex.TabIndex = 5;
             // 
             // lblSex
             // 
@@ -98,7 +98,7 @@
             this.lblSex.Location = new System.Drawing.Point(3, 195);
             this.lblSex.Name = "lblSex";
             this.lblSex.Size = new System.Drawing.Size(111, 39);
-            this.lblSex.TabIndex = 23;
+            this.lblSex.TabIndex = 12;
             this.lblSex.Text = "Sex:";
             // 
             // txtboxJob
@@ -108,7 +108,7 @@
             this.txtboxJob.Location = new System.Drawing.Point(120, 159);
             this.txtboxJob.Name = "txtboxJob";
             this.txtboxJob.Size = new System.Drawing.Size(402, 33);
-            this.txtboxJob.TabIndex = 22;
+            this.txtboxJob.TabIndex = 4;
             // 
             // lblJob
             // 
@@ -118,7 +118,7 @@
             this.lblJob.Location = new System.Drawing.Point(3, 156);
             this.lblJob.Name = "lblJob";
             this.lblJob.Size = new System.Drawing.Size(111, 39);
-            this.lblJob.TabIndex = 21;
+            this.lblJob.TabIndex = 11;
             this.lblJob.Text = "Job:";
             // 
             // tableLayoutPanel1
@@ -163,7 +163,7 @@
             this.txtboxFirstName.Location = new System.Drawing.Point(120, 81);
             this.txtboxFirstName.Name = "txtboxFirstName";
             this.txtboxFirstName.Size = new System.Drawing.Size(402, 33);
-            this.txtboxFirstName.TabIndex = 18;
+            this.txtboxFirstName.TabIndex = 2;
             // 
             // lblFirstName
             // 
@@ -173,7 +173,7 @@
             this.lblFirstName.Location = new System.Drawing.Point(3, 78);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(111, 39);
-            this.lblFirstName.TabIndex = 17;
+            this.lblFirstName.TabIndex = 9;
             this.lblFirstName.Text = "First Name:";
             // 
             // lblEmail
@@ -185,7 +185,7 @@
             this.lblEmail.Location = new System.Drawing.Point(3, 0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(111, 39);
-            this.lblEmail.TabIndex = 10;
+            this.lblEmail.TabIndex = 7;
             this.lblEmail.Text = "Email: ";
             // 
             // datetimepickerBirthDate
@@ -195,7 +195,7 @@
             this.datetimepickerBirthDate.Location = new System.Drawing.Point(120, 42);
             this.datetimepickerBirthDate.Name = "datetimepickerBirthDate";
             this.datetimepickerBirthDate.Size = new System.Drawing.Size(402, 33);
-            this.datetimepickerBirthDate.TabIndex = 14;
+            this.datetimepickerBirthDate.TabIndex = 1;
             // 
             // txtboxEmail
             // 
@@ -204,7 +204,7 @@
             this.txtboxEmail.Location = new System.Drawing.Point(120, 3);
             this.txtboxEmail.Name = "txtboxEmail";
             this.txtboxEmail.Size = new System.Drawing.Size(402, 33);
-            this.txtboxEmail.TabIndex = 12;
+            this.txtboxEmail.TabIndex = 0;
             // 
             // lblBirthdate
             // 
@@ -215,7 +215,7 @@
             this.lblBirthdate.Location = new System.Drawing.Point(3, 39);
             this.lblBirthdate.Name = "lblBirthdate";
             this.lblBirthdate.Size = new System.Drawing.Size(111, 39);
-            this.lblBirthdate.TabIndex = 11;
+            this.lblBirthdate.TabIndex = 8;
             this.lblBirthdate.Text = "Birth Date: ";
             // 
             // lblBiography
@@ -226,7 +226,7 @@
             this.lblBiography.Location = new System.Drawing.Point(3, 117);
             this.lblBiography.Name = "lblBiography";
             this.lblBiography.Size = new System.Drawing.Size(111, 39);
-            this.lblBiography.TabIndex = 19;
+            this.lblBiography.TabIndex = 10;
             this.lblBiography.Text = "Biography:";
             // 
             // txtboxBiography
@@ -236,7 +236,7 @@
             this.txtboxBiography.Location = new System.Drawing.Point(120, 120);
             this.txtboxBiography.Name = "txtboxBiography";
             this.txtboxBiography.Size = new System.Drawing.Size(402, 33);
-            this.txtboxBiography.TabIndex = 20;
+            this.txtboxBiography.TabIndex = 3;
             // 
             // comboboxLivingArea
             // 
@@ -252,7 +252,7 @@
             this.comboboxLivingArea.Location = new System.Drawing.Point(120, 237);
             this.comboboxLivingArea.Name = "comboboxLivingArea";
             this.comboboxLivingArea.Size = new System.Drawing.Size(402, 34);
-            this.comboboxLivingArea.TabIndex = 25;
+            this.comboboxLivingArea.TabIndex = 6;
             // 
             // tableLayoutPanel2
             // 
