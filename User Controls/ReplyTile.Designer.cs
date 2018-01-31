@@ -130,6 +130,7 @@
             // 
             // richtextboxReplyContent
             // 
+            this.richtextboxReplyContent.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richtextboxReplyContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richtextboxReplyContent.Location = new System.Drawing.Point(3, 43);
             this.richtextboxReplyContent.Name = "richtextboxReplyContent";
@@ -148,6 +149,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Info;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.tableLayoutPanel);
             this.Name = "ReplyTile";
             this.Size = new System.Drawing.Size(784, 220);

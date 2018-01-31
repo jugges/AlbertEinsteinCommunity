@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AdminPanelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminPanelForm.Designer.cs">
+      <DependentUpon>AdminPanelForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Objects\Permission.cs" />
     <Compile Include="User Controls\AddTile.cs">
       <SubType>UserControl</SubType>
@@ -118,6 +124,9 @@
     <Compile Include="Forms\WelcomeForm.Designer.cs">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AdminPanelForm.resx">
+      <DependentUpon>AdminPanelForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Controls\AddTile.resx">
       <DependentUpon>AddTile.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,51 +212,6 @@
     <None Include="Resources\6.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\justifyright.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\justifycenter.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\justifyleft.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\italic.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bold.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bullist.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\forecolor.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\underline.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\strikethrough.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\redo.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\undo.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\backcolor.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\indent.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\outdent.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\save.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\outdent.png" />
   </ItemGroup>
   <ItemGroup>
@@ -258,9 +222,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\edit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logout.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\register.png" />
@@ -315,6 +276,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adminpanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -36,6 +36,7 @@
             this.forumBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.forumBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.forumBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.forumBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.forumBtn.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.forumBtn.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.forumBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;

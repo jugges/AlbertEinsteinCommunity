@@ -138,5 +138,10 @@ namespace AlbertEinsteinCommunity
         {
             new InfoForm(user, true).ShowDialog();
         }
+
+        private void adminPanelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new AdminPanelForm().Show();
+        }
     }
 }
