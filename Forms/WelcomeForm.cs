@@ -21,7 +21,7 @@ namespace AlbertEinsteinCommunity
         public bool permissionGranted = false;
         private bool replyCreation;
         private int currentThreadId;
-        private string currentForumName;
+        public string currentForumName;
         public WelcomeForm(User user)
         {
             InitializeComponent();
