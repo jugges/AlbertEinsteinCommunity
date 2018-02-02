@@ -76,11 +76,17 @@ namespace AlbertEinsteinCommunity
             if (reply.IsOp)
             {
                 if (MessageBox.Show("Are you sure about deleting this thread?", "Authentication Required", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                    new Controller().DeleteThread(reply.ThreadId);
+                {
+                    Controller controller = new Controller();
+                    controller.DeleteThread(reply.ThreadId);
+                    welcomeForm.SetThreadList(welcomeForm.currentForumName);
+                }
             }
-            else
-                if (MessageBox.Show("Are you sure about deleting this reply?", "Authentication Required", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                    new Controller().DeleteReply(reply.ReplyId);
+            else if (MessageBox.Show("Are you sure about deleting this reply?", "Authentication Required", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                new Controller().DeleteReply(reply.ReplyId);
+                welcomeForm.SetReplyList(reply.ThreadId);
+            }
         }
     }
 }
