@@ -1,2 +1,2 @@
 # AlbertEinsteinCommunity
-Requirement: https://www.microsoft.com/en-us/download/confirmation.aspx?id=23734
+Requirement(master-access version only): https://www.microsoft.com/en-us/download/confirmation.aspx?id=23734
