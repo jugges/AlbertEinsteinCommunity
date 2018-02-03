@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.OleDb;
 using System.Data;
-using System.Data.SqlClient;
 using System.Resources;
 using System.Drawing;
 using System.Windows.Forms;
@@ -11,12 +11,12 @@ namespace AlbertEinsteinCommunity
 {
     public class Controller
     {
-        SqlConnection connection;
-        SqlCommand command;
+        OleDbConnection connection;
+        OleDbCommand command;
 
         private void ConnectTo()
         {
-            connection = new SqlConnection("Data Source=79.181.106.206,1433; Uid=admin; Pwd = test1234; ");
+            connection = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Program.dbDir);
             command = connection.CreateCommand();
         }
 
@@ -51,7 +51,7 @@ namespace AlbertEinsteinCommunity
                 command.CommandType = CommandType.Text;
                 connection.Open();
 
-                SqlDataReader reader = command.ExecuteReader();
+                OleDbDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
                 {
@@ -75,7 +75,7 @@ namespace AlbertEinsteinCommunity
                 connection.Open();
 
                 Controller controller = new Controller();
-                SqlDataReader reader = command.ExecuteReader();
+                OleDbDataReader reader = command.ExecuteReader();
                 User user = new User();
 
                 while (reader.Read())
@@ -142,7 +142,7 @@ namespace AlbertEinsteinCommunity
                 command.CommandType = CommandType.Text;
                 connection.Open();
 
-                SqlDataReader reader = command.ExecuteReader();
+                OleDbDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
                 {
@@ -174,7 +174,7 @@ namespace AlbertEinsteinCommunity
                 command.CommandType = CommandType.Text;
                 connection.Open();
 
-                SqlDataReader reader = command.ExecuteReader();
+                OleDbDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
                 {
@@ -208,7 +208,7 @@ namespace AlbertEinsteinCommunity
                 command.CommandType = CommandType.Text;
                 connection.Open();
 
-                SqlDataReader reader = command.ExecuteReader();
+                OleDbDataReader reader = command.ExecuteReader();
 
                 Reply threadContentReply = new Reply();
                 threadContentReply.ThreadId = threadId;
@@ -253,7 +253,7 @@ namespace AlbertEinsteinCommunity
                 command.CommandType = CommandType.Text;
                 connection.Open();
 
-                SqlDataReader reader = command.ExecuteReader();
+                OleDbDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
                 {
@@ -379,7 +379,7 @@ namespace AlbertEinsteinCommunity
                 command.CommandType = CommandType.Text;
                 connection.Open();
 
-                SqlDataReader reader = command.ExecuteReader();
+                OleDbDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
                 {
