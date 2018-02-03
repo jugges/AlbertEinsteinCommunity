@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.usernameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adminPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.TopToolStripPanel = new System.Windows.Forms.ToolStripPanel();
@@ -38,10 +42,6 @@
             this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
             this.forumList = new System.Windows.Forms.TableLayoutPanel();
             this.threadList = new System.Windows.Forms.TableLayoutPanel();
-            this.usernameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adminPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +56,41 @@
             this.menuStrip.Size = new System.Drawing.Size(1130, 24);
             this.menuStrip.TabIndex = 1;
             this.menuStrip.Text = "menuStrip1";
+            // 
+            // usernameToolStripMenuItem
+            // 
+            this.usernameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.infoToolStripMenuItem,
+            this.signOutToolStripMenuItem});
+            this.usernameToolStripMenuItem.Image = global::AlbertEinsteinCommunity.Properties.Resources.user;
+            this.usernameToolStripMenuItem.Name = "usernameToolStripMenuItem";
+            this.usernameToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.usernameToolStripMenuItem.Text = "USERNAME";
+            // 
+            // infoToolStripMenuItem
+            // 
+            this.infoToolStripMenuItem.Image = global::AlbertEinsteinCommunity.Properties.Resources.profile;
+            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.infoToolStripMenuItem.Text = "Profile";
+            this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
+            // 
+            // signOutToolStripMenuItem
+            // 
+            this.signOutToolStripMenuItem.Image = global::AlbertEinsteinCommunity.Properties.Resources.signout;
+            this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.signOutToolStripMenuItem.Text = "Sign Out";
+            this.signOutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            // 
+            // adminPanelToolStripMenuItem
+            // 
+            this.adminPanelToolStripMenuItem.Image = global::AlbertEinsteinCommunity.Properties.Resources.adminpanel;
+            this.adminPanelToolStripMenuItem.Name = "adminPanelToolStripMenuItem";
+            this.adminPanelToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
+            this.adminPanelToolStripMenuItem.Text = "Admin Panel";
+            this.adminPanelToolStripMenuItem.Visible = false;
+            this.adminPanelToolStripMenuItem.Click += new System.EventHandler(this.adminPanelToolStripMenuItem_Click);
             // 
             // notifyIcon
             // 
@@ -128,40 +163,6 @@
             this.threadList.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.threadList.Size = new System.Drawing.Size(959, 643);
             this.threadList.TabIndex = 11;
-            // 
-            // usernameToolStripMenuItem
-            // 
-            this.usernameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.infoToolStripMenuItem,
-            this.signOutToolStripMenuItem});
-            this.usernameToolStripMenuItem.Image = global::AlbertEinsteinCommunity.Properties.Resources.user;
-            this.usernameToolStripMenuItem.Name = "usernameToolStripMenuItem";
-            this.usernameToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
-            this.usernameToolStripMenuItem.Text = "USERNAME";
-            // 
-            // infoToolStripMenuItem
-            // 
-            this.infoToolStripMenuItem.Image = global::AlbertEinsteinCommunity.Properties.Resources.profile;
-            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.infoToolStripMenuItem.Text = "Profile";
-            this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
-            // 
-            // signOutToolStripMenuItem
-            // 
-            this.signOutToolStripMenuItem.Image = global::AlbertEinsteinCommunity.Properties.Resources.signout;
-            this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.signOutToolStripMenuItem.Text = "Sign Out";
-            this.signOutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
-            // 
-            // adminPanelToolStripMenuItem
-            // 
-            this.adminPanelToolStripMenuItem.Image = global::AlbertEinsteinCommunity.Properties.Resources.adminpanel;
-            this.adminPanelToolStripMenuItem.Name = "adminPanelToolStripMenuItem";
-            this.adminPanelToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
-            this.adminPanelToolStripMenuItem.Text = "Admin Panel";
-            this.adminPanelToolStripMenuItem.Click += new System.EventHandler(this.adminPanelToolStripMenuItem_Click);
             // 
             // WelcomeForm
             // 
