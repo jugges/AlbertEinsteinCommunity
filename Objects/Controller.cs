@@ -103,7 +103,7 @@ namespace AlbertEinsteinCommunity
                         forum = controller.GetSpecificPermission(username);
                     else
                         forum = null;
-                    user.Permission = new Permission(permission, forum);
+                    user.Permission = new Permission(permission,forum);
                 }
                 return user;
             }
@@ -281,14 +281,8 @@ namespace AlbertEinsteinCommunity
         {
             try
             {
-                command.CommandText = "INSERT INTO Replies (replyContent,replyMaker,threadId) VALUES(@replyContent, @replyMaker, @threadId)";
+                command.CommandText = "INSERT INTO Replies (replyContent, threadId, replyMaker) VALUES(\"" + reply.ReplyContent + "\", " + reply.ThreadId + ", '" + reply.ReplyMaker.Username + "')";
                 command.CommandType = CommandType.Text;
-                command.Parameters.Add("@replyContent", SqlDbType.NVarChar);
-                command.Parameters.Add("@replyMaker", SqlDbType.VarChar);
-                command.Parameters.Add("@threadId", SqlDbType.Int);
-                command.Parameters["@replyContent"].Value = reply.ReplyContent;
-                command.Parameters["@replyMaker"].Value = reply.ReplyMaker.Username;
-                command.Parameters["@threadId"].Value = reply.ThreadId;
                 connection.Open();
 
                 command.ExecuteNonQuery();
@@ -297,7 +291,6 @@ namespace AlbertEinsteinCommunity
             {
                 if (connection != null)
                     connection.Close();
-                command.Parameters.Clear();
             }
         }
 
@@ -305,16 +298,9 @@ namespace AlbertEinsteinCommunity
         {
             try
             {
-                command.CommandText = "INSERT INTO Threads (forumName, threadName, threadMaker, threadContent) VALUES(@forumName, @threadName, @threadMaker, @threadContent)";
+                command.CommandText = "INSERT INTO Threads (forumName, threadName, threadMaker, threadContent) VALUES('" + thread.ForumName + "', '" + thread.ThreadName + "', '" + thread.ThreadMaker.Username + "', '" + thread.ThreadContent + "')";
+                string x = command.CommandText;
                 command.CommandType = CommandType.Text;
-                command.Parameters.Add("@forumName", SqlDbType.VarChar);
-                command.Parameters.Add("@threadName", SqlDbType.VarChar);
-                command.Parameters.Add("@threadMaker", SqlDbType.VarChar);
-                command.Parameters.Add("@threadContent", SqlDbType.NVarChar);
-                command.Parameters["@forumName"].Value = thread.ForumName;
-                command.Parameters["@threadName"].Value = thread.ThreadName;
-                command.Parameters["@threadMaker"].Value = thread.ThreadMaker.Username;
-                command.Parameters["@threadContent"].Value = thread.ThreadContent;
                 connection.Open();
 
                 command.ExecuteNonQuery();
@@ -323,7 +309,6 @@ namespace AlbertEinsteinCommunity
             {
                 if (connection != null)
                     connection.Close();
-                command.Parameters.Clear();
             }
         }
 
@@ -331,12 +316,8 @@ namespace AlbertEinsteinCommunity
         {
             try
             {
-                command.CommandText = "UPDATE Replies SET [replyContent] = @replyContent WHERE [replyId] = @replyId";
+                command.CommandText = "UPDATE Replies SET [replyContent] =  \"" + reply.ReplyContent + "\" WHERE[replyId] = " + reply.ReplyId;
                 command.CommandType = CommandType.Text;
-                command.Parameters.Add("@replyContent", SqlDbType.NVarChar);
-                command.Parameters.Add("@replyId", SqlDbType.Int);
-                command.Parameters["@replyContent"].Value = reply.ReplyContent;
-                command.Parameters["@replyId"].Value = reply.ReplyId;
                 connection.Open();
 
                 command.ExecuteNonQuery();
@@ -345,7 +326,6 @@ namespace AlbertEinsteinCommunity
             {
                 if (connection != null)
                     connection.Close();
-                command.Parameters.Clear();
             }
         }
 
@@ -353,12 +333,8 @@ namespace AlbertEinsteinCommunity
         {
             try
             {
-                command.CommandText = "UPDATE Threads SET [threadContent] =  @threadContent WHERE[threadId] = @threadId";
+                command.CommandText = "UPDATE Threads SET [threadContent] =  \"" + reply.ReplyContent + "\" WHERE[threadId] = " + reply.ThreadId;
                 command.CommandType = CommandType.Text;
-                command.Parameters.Add("@threadContent", SqlDbType.NVarChar);
-                command.Parameters.Add("@threadId", SqlDbType.Int);
-                command.Parameters["@threadContent"].Value = reply.ReplyContent;
-                command.Parameters["@threadId"].Value = reply.ThreadId;
                 connection.Open();
 
                 command.ExecuteNonQuery();
@@ -367,7 +343,6 @@ namespace AlbertEinsteinCommunity
             {
                 if (connection != null)
                     connection.Close();
-                command.Parameters.Clear();
             }
         }
 
@@ -398,7 +373,7 @@ namespace AlbertEinsteinCommunity
         {
             try
             {
-                command.CommandText = "DELETE FROM Threads WHERE threadId=" + threadId;
+                command.CommandText = "DELETE * FROM Threads WHERE threadId="+threadId;
                 command.CommandType = CommandType.Text;
                 connection.Open();
 
@@ -415,7 +390,7 @@ namespace AlbertEinsteinCommunity
         {
             try
             {
-                command.CommandText = "DELETE FROM Replies WHERE replyId=" + replyId;
+                command.CommandText = "DELETE * FROM Replies WHERE replyId=" + replyId;
                 command.CommandType = CommandType.Text;
                 connection.Open();
 

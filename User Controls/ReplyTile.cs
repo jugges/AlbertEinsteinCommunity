@@ -49,7 +49,7 @@ namespace AlbertEinsteinCommunity
             const int margin = 5;
             richtextboxReplyContent.Height = e.NewRectangle.Height + margin;
         }
-
+        
         private void picEdit_Click(object sender, EventArgs e)
         {
             RTFEditorForm rtfEditorForm = new RTFEditorForm(true);
@@ -76,17 +76,11 @@ namespace AlbertEinsteinCommunity
             if (reply.IsOp)
             {
                 if (MessageBox.Show("Are you sure about deleting this thread?", "Authentication Required", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
-                    Controller controller = new Controller();
-                    controller.DeleteThread(reply.ThreadId);
-                    welcomeForm.SetThreadList(welcomeForm.currentForumName);
-                }
+                    new Controller().DeleteThread(reply.ThreadId);
             }
-            else if (MessageBox.Show("Are you sure about deleting this reply?", "Authentication Required", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                new Controller().DeleteReply(reply.ReplyId);
-                welcomeForm.SetReplyList(reply.ThreadId);
-            }
+            else
+                if (MessageBox.Show("Are you sure about deleting this reply?", "Authentication Required", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    new Controller().DeleteReply(reply.ReplyId);
         }
     }
 }

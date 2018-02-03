@@ -19,9 +19,15 @@ namespace AlbertEinsteinCommunity
         public User user;
         private int permissionLevel = 0;
         public bool permissionGranted = false;
+<<<<<<< HEAD
         public bool replyCreation;
         public int currentThreadId;
         public string currentForumName;
+=======
+        private bool replyCreation;
+        private int currentThreadId;
+        private string currentForumName;
+>>>>>>> parent of f022c11... MS SQL SERVER VERSION WORKING!!!! 😏
         public WelcomeForm(User user)
         {
             InitializeComponent();
