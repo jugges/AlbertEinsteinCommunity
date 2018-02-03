@@ -31,6 +31,7 @@ namespace AlbertEinsteinCommunity
             {
                 permissionLevel = 2;
                 permissionGranted = true;
+                adminPanelToolStripMenuItem.Visible = true;
             }
             else if (permissionType == "specific")
                 permissionLevel = 1;
