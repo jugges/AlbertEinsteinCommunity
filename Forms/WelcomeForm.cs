@@ -19,8 +19,8 @@ namespace AlbertEinsteinCommunity
         public User user;
         private int permissionLevel = 0;
         public bool permissionGranted = false;
-        private bool replyCreation;
-        private int currentThreadId;
+        public bool replyCreation;
+        public int currentThreadId;
         public string currentForumName;
         public WelcomeForm(User user)
         {
@@ -107,32 +107,6 @@ namespace AlbertEinsteinCommunity
                 threadList.RowCount++;
             }
             replyCreation = true;
-        }
-
-        public void Wysiwyg()
-        {
-            RTFEditorForm rtfEditorForm = new RTFEditorForm(replyCreation);
-            rtfEditorForm.ShowDialog();
-            if (rtfEditorForm.isEdited)
-                if (replyCreation)
-                {
-                    Reply newReply = new Reply();
-                    newReply.ReplyMaker = user;
-                    newReply.ReplyContent = rtfEditorForm.rtf;
-                    newReply.ThreadId = currentThreadId;
-                    controller.AddReply(newReply);
-                    SetReplyList(currentThreadId);
-                }
-                else
-                {
-                    Thread newThread = new Thread();
-                    newThread.ThreadMaker = user;
-                    newThread.ThreadName = rtfEditorForm.threadName;
-                    newThread.ThreadContent = rtfEditorForm.rtf;
-                    newThread.ForumName = currentForumName;
-                    controller.AddThread(newThread);
-                    SetThreadList(currentForumName);
-                }
         }
 
         private void infoToolStripMenuItem_Click(object sender, EventArgs e)
