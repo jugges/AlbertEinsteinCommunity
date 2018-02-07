@@ -16,7 +16,7 @@ namespace AlbertEinsteinCommunity
 
         private void ConnectTo()
         {
-            connection = new SqlConnection("Data Source=79.181.106.206,1433; Uid=admin; Pwd = test1234; ");
+            connection = new SqlConnection("Data Source=alberteinsteincom.ddns.net,1433; Uid=admin; Pwd = test1234; ");
             command = connection.CreateCommand();
         }
 
