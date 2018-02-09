@@ -41,7 +41,7 @@ namespace AlbertEinsteinCommunity
 
         private void lblReplyMaker_Click(object sender, EventArgs e)
         {
-            new InfoForm(reply.ReplyMaker, isMine).ShowDialog();
+            new InfoForm(reply.ReplyMaker, isMine||welcomeForm.permissionLevel==2).ShowDialog();
         }
 
         private void richtextboxReplyContent_ContentsResized(object sender, ContentsResizedEventArgs e)
