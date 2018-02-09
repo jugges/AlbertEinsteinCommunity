@@ -83,7 +83,7 @@ namespace AlbertEinsteinCommunity
             {
                 threadList.Controls.Add(threadTiles[i]);
                 threadList.SetRow(threadTiles[i], i);
-                threadTiles[i].Dock = DockStyle.Top;
+                threadTiles[i].Dock = DockStyle.Fill;
                 //threadList.RowStyles[i].SizeType = SizeType.AutoSize;
                 threadList.RowCount++;
             }
