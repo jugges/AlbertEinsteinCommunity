@@ -66,6 +66,50 @@ namespace AlbertEinsteinCommunity
             }
         }
 
+        public bool UsernameCheck(String username)
+        {
+            try
+            {
+                command.CommandText = "SELECT [username] FROM Users WHERE [username]='" + username + "'";
+                command.CommandType = CommandType.Text;
+                connection.Open();
+
+                OleDbDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    return false;
+                }
+                return true;
+            }
+            finally
+            {
+                connection?.Close();
+            }
+        }
+
+        public bool EmailCheck(String email)
+        {
+            try
+            {
+                command.CommandText = "SELECT [email] FROM Users WHERE [email]='" + email + "'";
+                command.CommandType = CommandType.Text;
+                connection.Open();
+
+                OleDbDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    return false;
+                }
+                return true;
+            }
+            finally
+            {
+                connection?.Close();
+            }
+        }
+
         public User IdentifyUser(string username)
         {
             try
