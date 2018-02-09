@@ -14,12 +14,13 @@ namespace AlbertEinsteinCommunity
     public partial class InfoForm : Form
     {
         User user;
-        private bool isThisUser;
-        public InfoForm(User user, bool isThisUser)
+        private bool isPermission;
+
+        public InfoForm(User user, bool isPermission)
         {
             InitializeComponent();
             this.user = user;
-            this.isThisUser = isThisUser;
+            this.isPermission = isPermission;
         }
 
         public void RefreshInfo()
@@ -45,7 +46,7 @@ namespace AlbertEinsteinCommunity
 
         private void InfoForm_Load(object sender, EventArgs e)
         {
-            if (isThisUser)
+            if (isPermission)
                 btnEdit.Show();
             else
             {
@@ -57,22 +58,22 @@ namespace AlbertEinsteinCommunity
         private void btnEdit_Click(object sender, EventArgs e)
         {
             Controller controller = new Controller();
-            string passwordEnter;
-            if (Properties.Settings.Default.RememberMe == true)
-            {
-                passwordEnter = Properties.Settings.Default.Password;
-            }
-            else
-            {
-                passwordEnter = Microsoft.VisualBasic.Interaction.InputBox("Enter password to verify yourself to edit you'r profile", "Authentication Required", "").ToSHA(Crypto.SHA_Type.SHA256).ToLower();
-            }
-            string passwordCheck = controller.PasswordCheck(user.Username);
-            if (passwordEnter == passwordCheck)
-            {
+            //string passwordEnter;
+            //if (Properties.Settings.Default.RememberMe == true)
+            //{
+            //    passwordEnter = Properties.Settings.Default.Password;
+            //}
+            //else
+            //{
+            //    passwordEnter = Microsoft.VisualBasic.Interaction.InputBox("Enter password to verify yourself to edit you'r profile", "Authentication Required", "").ToSHA(Crypto.SHA_Type.SHA256).ToLower();
+            //}
+            //string passwordCheck = controller.PasswordCheck(user.Username);
+            //if (passwordEnter == passwordCheck)
+            //{
                 new EditUserForm(user, this).ShowDialog();
-            }
-            else
-                MessageBox.Show(null, "There was an error, wrong password", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //else
+            //    MessageBox.Show(null, "There was an error, wrong password", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

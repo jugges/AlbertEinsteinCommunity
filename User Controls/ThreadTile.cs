@@ -30,7 +30,7 @@ namespace AlbertEinsteinCommunity
 
         private void lblThreadMaker_Click(object sender, EventArgs e)
         {
-            new InfoForm(thread.ThreadMaker,isMine).ShowDialog();
+            new InfoForm(thread.ThreadMaker,isMine || welcomeForm.permissionLevel == 2).ShowDialog();
         }
 
         private void lblThreadName_Click(object sender, EventArgs e)

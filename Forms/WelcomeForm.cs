@@ -17,7 +17,7 @@ namespace AlbertEinsteinCommunity
         List<UserControl> replyTiles;
         Controller controller = new Controller();
         public User user;
-        private int permissionLevel = 0;
+        public int permissionLevel = 0;
         public bool permissionGranted = false;
         public bool replyCreation;
         public int currentThreadId;
