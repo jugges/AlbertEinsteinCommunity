@@ -16,7 +16,7 @@ namespace AlbertEinsteinCommunity
 
         private void ConnectTo()
         {
-            connection = new SqlConnection("Data Source=alberteinsteincom.ddns.net,1433; Uid=admin; Pwd = test1234; ");
+            connection = new SqlConnection("Data Source=alberteinsteincom.ddns.net,1433; Uid=admin; Pwd = test1234;");
             command = connection.CreateCommand();
         }
 
@@ -66,6 +66,50 @@ namespace AlbertEinsteinCommunity
             }
         }
 
+        public bool UsernameCheck(String username)
+        {
+            try
+            {
+                command.CommandText = "SELECT [username] FROM Users WHERE [username]='" + username + "'";
+                command.CommandType = CommandType.Text;
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    return false;
+                }
+                return true;
+            }
+            finally
+            {
+                connection?.Close();
+            }
+        }
+
+        public bool EmailCheck(String email)
+        {
+            try
+            {
+                command.CommandText = "SELECT [email] FROM Users WHERE [email]='" + email + "'";
+                command.CommandType = CommandType.Text;
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    return false;
+                }
+                return true;
+            }
+            finally
+            {
+                connection?.Close();
+            }
+        }
+
         public User IdentifyUser(string username)
         {
             try
@@ -109,8 +153,7 @@ namespace AlbertEinsteinCommunity
             }
             finally
             {
-                if (connection != null)
-                    connection.Close();
+                connection?.Close();
             }
         }
 
@@ -126,8 +169,7 @@ namespace AlbertEinsteinCommunity
             }
             finally
             {
-                if (connection != null)
-                    connection.Close();
+                connection?.Close();
             }
         }
 
@@ -158,8 +200,7 @@ namespace AlbertEinsteinCommunity
             }
             finally
             {
-                if (connection != null)
-                    connection.Close();
+                connection?.Close();
             }
         }
 
@@ -265,10 +306,6 @@ namespace AlbertEinsteinCommunity
                     thread.ThreadMaker = controller.IdentifyUser(reader["threadMaker"].ToString());
                 }
                 return thread;
-            }
-            catch (Exception)
-            {
-                throw;
             }
             finally
             {
